@@ -37,28 +37,32 @@ const DesktopNavbar = () => {
     
 
     return (
-        <nav className={`navbar ${isDarkMode ? 'navbar-dark' : 'navbar-light'}`}>
+        <nav className={`navbar `}>
             <div className="navbar-logo">
                 <img src="https://avatars.githubusercontent.com/u/146749055?v=4" alt="Logo" className="logo" />
                 <h1>Akash Bera</h1>
             </div>
-            
-            <ul className="navbar-list">
-                <li><a href="#about" className={`navbar-link ${activeSection === 'about' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>About</a></li>
-                <li><a href="#skills" className={`navbar-link ${activeSection === 'skills' ? 'active' : ''}  ${isDarkMode ? 'link-dark' : 'link-light'}`}>Skills</a></li>
-                <li><a href="#projects" className={`navbar-link ${activeSection === 'projects' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Projects</a></li>
-                <li><a href="#experience" className={`navbar-link ${activeSection === 'experience' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Experience</a></li>
-                <li><a href="#certifications" className={`navbar-link ${activeSection === 'certificate' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Certifications</a></li>
-                <li><a href="#contact" className={`navbar-link ${activeSection === 'contact' ? 'active' : ''}${isDarkMode ? 'link-dark' : 'link-light'}`}>Contact</a></li>
-            </ul>
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className={`navbar-link-linkedin ${isDarkMode ? 'link-dark' : 'link-light'}`}>
+            <div class="navbar-container">
+                <ul className={`navbar-list ${isDarkMode ? 'navbar-dark' : 'navbar-light' }`}>
+                    <li><a href="#about" className={`navbar-link ${activeSection === 'about' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>About</a></li>
+                    <li><a href="#skills" className={`navbar-link ${activeSection === 'skills' ? 'active' : ''}  ${isDarkMode ? 'link-dark' : 'link-light'}`}>Skills</a></li>
+                    <li><a href="#projects" className={`navbar-link ${activeSection === 'projects' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Projects</a></li>
+                    <li><a href="#experience" className={`navbar-link ${activeSection === 'experience' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Experience</a></li>
+                    <li><a href="#certifications" className={`navbar-link ${activeSection === 'certifications' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Certifications</a></li>
+                    <li><a href="#contact" className={`navbar-link ${activeSection === 'contact' ? 'active' : ''}${isDarkMode ? 'link-dark' : 'link-light'}`}>Contact</a></li>
+                </ul>
+            </div>
+            <div className="linkedin-and-theme-button">
+                 <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className={`navbar-link-linkedin ${isDarkMode ? 'link-dark' : 'link-light'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M22.225 0H1.775C.796 0 0 .795 0 1.775v20.45C0 23.205.796 24 1.775 24h20.45C23.205 24 24 23.205 24 22.225V1.775C24 .795 23.205 0 22.225 0zM7.079 20.452H3.74V9h3.339v11.452zM5.41 7.474c-1.05 0-1.89-.857-1.89-1.91 0-1.064.841-1.91 1.895-1.91 1.05 0 1.889.846 1.889 1.91 0 1.053-.839 1.91-1.889 1.91zM20.43 20.452h-3.339v-5.848c0-1.394-.027-3.197-1.948-3.197-1.951 0-2.248 1.525-2.248 3.096v6.949h-3.339V9h3.203v1.564h.046c.445-.84 1.53-1.73 3.145-1.73 3.363 0 3.981 2.208 3.981 5.08v6.539z"/>
                 </svg>
-            </a>
-            <button onClick={toggleTheme} className={`theme-toggle ${isDarkMode ? 'toggle-dark' : 'toggle-light'}`}>
-                {isDarkMode ? '🌙' : '☀️'}
-            </button>
+                </a>
+                <button onClick={toggleTheme} className={`theme-toggle ${isDarkMode ? 'toggle-dark' : 'toggle-light'}`}>
+                    {isDarkMode ? '🌙' : '☀️'}
+                </button>
+            </div>
+           
            
         </nav>
     );
@@ -159,8 +163,9 @@ const MobileNavbar = () => {
                 <li><a href="#skills" className={`navbar-link ${activeSection === 'skills' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Skills</a></li>
                 <li><a href="#projects" className={`navbar-link ${activeSection === 'projects' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Projects</a></li>
                 <li><a href="#experience" className={`navbar-link ${activeSection === 'experience' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Experience</a></li>
-                <li><a href="#certifications" className={`navbar-link ${activeSection === 'certificate' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Certifications</a></li>
+                <li><a href="#certifications" className={`navbar-link ${activeSection === 'certifications' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>Certifications</a></li>
                 <li><a href="#contact" className={`navbar-link ${activeSection === 'contact' ? 'active' : ''}${isDarkMode ? 'link-dark' : 'link-light'}`}>Contact</a></li>
+
                 <button onClick={toggleTheme} className={`theme-toggle ${isDarkMode ? 'toggle-dark' : 'toggle-light'}`}>
                 {isDarkMode ? '🌙' : '☀️'}
             </button>
@@ -171,11 +176,11 @@ const MobileNavbar = () => {
 };
 
 const Navbar = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 980);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
+            setIsMobile(window.innerWidth <= 980);
         };
 
         window.addEventListener('resize', handleResize);

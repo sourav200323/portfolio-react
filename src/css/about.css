@@ -1,0 +1,119 @@
+.about-main{
+    /* min-height: 100vh; */
+}
+.grid {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #3a33fe2b 1px, transparent 1px),
+      linear-gradient(to bottom, #1f57ff4c 1px, transparent 1px);
+    background-size: 100px 100px;
+    /* background-color: red; */
+  } 
+
+  /* .about-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: transparent;
+  } */
+  
+  .about-container {
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* background-color: #666; */
+  }
+  
+  .left-side {
+    flex: 1;
+    padding-right: 30px;
+    /* background-color: #3366cc ; */
+    justify-content: center;
+
+  }
+  
+  .left-side h1 {
+    color: #4493f8;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  
+  .left-side p {
+    font-size: 1.25rem;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .note {
+    font-style: italic;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .links {
+    margin-top: 30px;
+  }
+  
+  .links a {
+    display: inline-block;
+    color: #4493f8;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .links a:hover {
+    color: #3366cc; /* Slightly darker blue on hover */
+  }
+  
+  .right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30%;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+    object-fit: cover;
+    width: 250px; /* Adjust this for a nice balanced image size */
+    filter: brightness(95%);
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: row;
+      text-align: center;
+    }
+  
+    .left-side {
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+  
+    .profile-image {
+      width: 200px; /* Adjust the size for smaller screens */
+    }
+  
+    .links a {
+      margin-right: 15px;
+    }
+  }
+  

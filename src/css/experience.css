@@ -1,0 +1,48 @@
+.experience-card-container {
+
+    position: relative;
+    margin-top: 10vh;
+    z-index: 1;
+    margin: 0 auto;
+    width: 95%;
+  }
+  
+  .experience-cards {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 4vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 100vh); /* Each experience-card takes full height */
+    gap: 4vw;
+  }
+  
+  .experience-card {
+    position: sticky;
+    top: 100vh; /* Sticky positioning starts at the top of the viewport */
+    height: 100vh;
+    border: 2px solid;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00ffff;
+    background-color: #163535;
+    margin-bottom: 2rem;
+  }
+  
+  .experience-card-body {
+    box-sizing: border-box;
+    color: #000;
+  }
+    .experience-card-heading {
+        position: absolute;
+        top: -10vh; /* Adjust this to control how far above the card the heading should appear */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        opacity: 0; /* Initially hidden */
+      }

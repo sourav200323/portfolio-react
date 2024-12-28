@@ -1,8 +1,8 @@
-// assets/colors.js
+// assets/themeColours.jsx 
 
 export const colors = {
     light: {
-        primaryBackground: 'white',
+        primaryBackground: '#f0f6fc',
         navColor: 'white',
         primaryTextColor: 'black',
         secondaryTextColor: 'gray',

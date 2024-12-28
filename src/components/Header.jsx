@@ -1,5 +1,20 @@
-Hello, I'm 
-Akash Bera 
-👋 Web Developer
-Excited to bring my technical skills, creativity, and passion for innovation to dynamic IT companies. I am open to opportunities where I can contribute, grow, and explore the ever-evolving tech landscape. With a strong foundation in Web Development, I am eager to tackle new challenges and collaborate with forward-thinking teams to drive impactful solutions. My goal is to continuously expand my expertise while making meaningful contributions to cutting-edge projects.
-it was previously , i m 
+import { motion } from "framer-motion"
+
+const variants = {
+  open: { opacity: 1, x: 0 },
+  closed: { opacity: 0, x: "-100%" },
+}
+
+export const MyComponent = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <motion.nav
+      animate={isOpen ? "open" : "closed"}
+      variants={variants}
+    >
+      <Toggle onClick={() => setIsOpen(isOpen => !isOpen)} />
+      <Items />
+    </motion.nav>
+  )
+}

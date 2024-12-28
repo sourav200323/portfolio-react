@@ -1,0 +1,67 @@
+.skills-container {
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    max-width: 1200px; /* Equivalent to lg:max-w-screen-xl */
+  }
+  
+  .skills-grid {
+    display: grid;
+    gap: 1.25rem; /* Equivalent to gap-5 */
+    grid-template-columns: repeat(1, 1fr); /* Default: single column */
+  }
+  
+  @media (min-width: 640px) { /* sm:grid-cols-2 */
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) { /* lg:grid-cols-4 */
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .skill-card {
+    padding: 0 3rem; /* Equivalent to px-12 */
+    text-align: center;
+  }
+  
+  @media (min-width: 640px) { /* sm:px-0 */
+    .skill-card {
+      padding: 0;
+    }
+  }
+  
+  .skill-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem; /* Equivalent to w-10 */
+    height: 2.5rem; /* Equivalent to h-10 */
+    margin: 0 auto 1rem; /* Equivalent to mx-auto mb-4 */
+    border-radius: 50%; /* Equivalent to rounded-full */
+    background-color: black; /* Equivalent to bg-black */
+  }
+  
+  @media (min-width: 640px) { /* sm:w-12 sm:h-12 */
+    .skill-icon-container {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  
+  .skill-heading {
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    font-weight: bold; /* Equivalent to font-bold */
+    line-height: 1.25rem; /* Equivalent to leading-5 */
+    text-transform: uppercase; /* Equivalent to uppercase */
+    letter-spacing: 0.05em; /* Equivalent to tracking-wider */
+  }
+  
+  .skill-description {
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+    color: #4493f8; /* Equivalent to text-gray-400 */
+  }
+  
