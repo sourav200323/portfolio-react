@@ -44,14 +44,29 @@ const loadingLines = [
 const LoadingScreen = ({ onComplete }) => {
   const [currentLine, setCurrentLine] = useState(0);
   const [lines, setLines] = useState([]);
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            onComplete(); // Skip loading when Enter or Space is pressed
+        }
+    };
 
+    window.addEventListener('keydown', handleKeyPress);
+
+    // Clean up event listener on component unmount
+    return () => {
+        window.removeEventListener('keydown', handleKeyPress);
+    };
+}, [onComplete]);
   useEffect(() => {
     // Simulate typing effect with a delay
     if (currentLine < loadingLines.length) {
+      const typingSpeeds = [50, 100, 150]; // Different speeds in ms
+
       const timeoutId = setTimeout(() => {
         setLines((prevLines) => [...prevLines, loadingLines[currentLine]]);
         setCurrentLine((prevLine) => prevLine + 1);
-      }, 70); // Adjust the typing speed
+      }, typingSpeeds[Math.floor(Math.random() * typingSpeeds.length)]);
 
       return () => clearTimeout(timeoutId); // Clean up timeout
     } else {
@@ -74,6 +89,7 @@ const LoadingScreen = ({ onComplete }) => {
           <span className="cursor"></span> // Blinking cursor
         )}
       </div>
+      
     </div>
   );
 };

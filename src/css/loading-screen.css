@@ -23,6 +23,7 @@
     height: 100%;
     overflow-y: auto;
   }
+
   
   .cursor {
     display: inline-block;
@@ -37,4 +38,5 @@
     50% { opacity: 0; }
     100% { opacity: 1; }
   }
+  
   

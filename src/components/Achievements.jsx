@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Certifications() {
+function Achievements() {
   return (
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in deleniti voluptatibus voluptatum ex soluta non mollitia vel velit sit incidunt consequatur esse voluptas saepe reiciendis, eos laboriosam earum dolores?
+    <div>
+       <h2>Achievements</h2>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in deleniti voluptatibus voluptatum ex soluta non mollitia vel velit sit incidunt consequatur esse voluptas saepe reiciendis, eos laboriosam earum dolores?
     Voluptate eos ducimus quasi saepe doloremque, eveniet voluptatem necessitatibus perferendis cum pariatur natus sint magnam, voluptas inventore. Aspernatur laudantium dolorem quos ipsum, aut atque, id facere dolor placeat, rem nihil.
     Laboriosam aut rem dicta eveniet. Dolorem deleniti minima quam sed saepe nemo sint! Alias, perferendis dolorem? Expedita, quisquam obcaecati. Mollitia, minima error. Perspiciatis accusantium similique maxime quam placeat delectus perferendis.
     A nulla rerum eius sunt libero officia beatae reprehenderit sequi minima cumque. Iure vero veritatis, sit repellendus iusto beatae enim doloremque magni libero? Provident corrupti natus veritatis rem deserunt inventore!
@@ -40,4 +42,4 @@ function Certifications() {
   )
 }
 
-export default Certifications
+export default Achievements 

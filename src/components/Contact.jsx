@@ -37,9 +37,11 @@ const Contact = () => {
       }
     }
   };
-  return (
+  return (<>
+    <h2>Contact</h2>  
     <div className="terminal-container">
        {/* <Draggable> */}
+    
       <div className="terminal">
         <div className="terminal-header">
           <div className="dots">
@@ -217,6 +219,7 @@ const Contact = () => {
       </div>
       {/* </Draggable> */}
     </div>
+    </>
   );
 };
 

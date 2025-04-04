@@ -1,14 +1,17 @@
 .terminal-container {
-  display: flex;
+  /* display: flex; */
+
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
   /* background-color: rgb(109, 3, 114); */
   color: white;
   position: relative;
+  
 }
 
 .terminal {
+  margin:0 auto;
   background-color: #2222228e;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);

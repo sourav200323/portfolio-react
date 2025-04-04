@@ -3,6 +3,7 @@ import '../css/skills.css'
 function Skills() {
   return (
     <div className="skills-container">
+        <h2>Skills </h2>
       <div className="skills-grid">
         <div className="skill-card">
           <div className="skill-icon-container">
@@ -26,7 +27,7 @@ function Skills() {
           <div className="skill-icon-container">
             <p>icon</p>
           </div>
-          <h6 className="skill-heading">UI/UX Design</h6>
+          <h6 className="skill-heading">IoT</h6>
           <div className="skill-description">
             Adept at creating intuitive and visually appealing user interfaces.
           </div>
@@ -41,7 +42,51 @@ function Skills() {
           </div>
         </div>
       </div>
-    </div>
+
+
+
+
+
+
+
+
+
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-info">
+            <h3>Total Subscribers</h3>
+            <p class="stat-value">71,897 <span class="stat-change up">↑ 122</span></p>
+          </div>
+          <a href="#" class="view-all">View all</a>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="stat-info">
+            <h3>Avg. Open Rate</h3>
+            <p class="stat-value">58.16% <span class="stat-change up">↑ 5.4%</span></p>
+          </div>
+          <a href="#" class="view-all">View all</a>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-mouse-pointer"></i>
+          </div>
+          <div class="stat-info">
+            <h3>Avg. Click Rate</h3>
+            <p class="stat-value">24.57% <span class="stat-change down">↓ 3.2%</span></p>
+          </div>
+          <a href="#" class="view-all">View all</a>
+        </div>
+      </div>
+
+    </div> 
 
   )
 }

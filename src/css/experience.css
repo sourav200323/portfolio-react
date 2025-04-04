@@ -1,48 +1,113 @@
-.experience-card-container {
+/* experience.css */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@400;700&display=swap');
 
-    position: relative;
-    margin-top: 10vh;
-    z-index: 1;
-    margin: 0 auto;
-    width: 95%;
-  }
-  
-  .experience-cards {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 4vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 100vh); /* Each experience-card takes full height */
-    gap: 4vw;
-  }
-  
-  .experience-card {
-    position: sticky;
-    top: 100vh; /* Sticky positioning starts at the top of the viewport */
-    height: 100vh;
-    border: 2px solid;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00ffff;
-    background-color: #163535;
-    margin-bottom: 2rem;
-  }
-  
-  .experience-card-body {
-    box-sizing: border-box;
-    color: #000;
-  }
-    .experience-card-heading {
-        position: absolute;
-        top: -10vh; /* Adjust this to control how far above the card the heading should appear */
-        left: 0;
-        width: 100%;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: bold;
-        color: #333;
-        opacity: 0; /* Initially hidden */
-      }
+.experience-container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Lexend Giga', sans-serif;
+  /* text-shadow: 
+  1px 1px 0px rgba(255, 255, 255, 0.7), 
+  -1px -1px 0px rgba(0, 0, 0, 0.4),
+  1px -1px 0px rgba(0, 0, 0, 0.3),
+  -1px 1px 0px rgba(255, 255, 255, 0.3); */
+
+
+}
+
+.experience-list {
+  margin-top: 20px;
+}
+
+.experience-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #4493f8; /* Default border color */
+  cursor: pointer;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px); /* Slight lifting effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+.experience-card h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.company-name {
+  font-size: 1.3rem;
+  color: #5e72e4; /* Vibrant color for company names */
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.duration {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.description {
+  /* font-size: 1.1rem; */
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+/* Dark mode adjustments */
+.navbar-dark .experience-card {
+  background-color: #333;
+  color: #fff;
+  border-left: 5px solid #4493f8; /* Accent color in dark mode */
+}
+
+.navbar-dark h3 {
+  color: #fff;
+}
+
+.navbar-dark .company-name {
+  color:  #4493f8; /* Light accent color in dark mode */
+}
+
+.navbar-dark .duration,
+.navbar-dark .description {
+  color: #e0e0e0;
+}
+
+/* Light mode adjustments */
+.navbar-light .experience-card {
+  background-color: #ffffff;
+  color: #333;
+  border-left: 5px solid #4493f8; /* Accent color in light mode */
+}
+
+.navbar-light h3 {
+  color: #333;
+}
+
+.navbar-light .company-name {
+  color: #4493f8 /* Accent color in light mode */
+}
+
+.navbar-light .duration,
+.navbar-light .description {
+  color: #555;
+}
+

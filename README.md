@@ -14,3 +14,7 @@ export const darkTheme = {
     textColor: '#FFFFFF', // White
     accentColor: '#00CED1', // Dark Turquoise
 };
+
+
+social icon :
+https://uiverse.io/imtausef/fuzzy-dragon-2

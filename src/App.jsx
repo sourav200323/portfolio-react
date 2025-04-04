@@ -14,7 +14,9 @@ import Contact from './components/Contact';
 import LoadingScreen from './components/LoadingScreen';
 
 import Footer from './components/Contact';
-import Certifications from './components/Certifications';
+import Achievements from './components/Achievements';
+
+// import Master_card_stack from './components/Master_card_stack' ;
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -37,6 +39,8 @@ const MainContent = () => {
       }}
     >
       <Navbar />
+
+      {/* <Master_card_stack/> */}
       <motion.div
         className="section"
         initial={{ opacity: 0, y: 50 }}
@@ -92,8 +96,8 @@ const MainContent = () => {
         exit={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.5 }}
       >
-        <section id="certifications">
-            <Certifications/>
+        <section id="achievements">
+            <Achievements/>
         </section>
       </motion.div>
 
@@ -116,7 +120,7 @@ const MainContent = () => {
   return (
     <ThemeProvider>
       {loading ? (
-        // <div>Loading...</div>
+        //  <MainContent />
         <LoadingScreen onComplete={handleLoadingComplete} />
 
       ) : (

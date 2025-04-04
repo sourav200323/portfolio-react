@@ -1,4 +1,17 @@
 /* Navbar.css */
+
+  
+  body.light-mode {
+    --tooltip-bg: #f8f9fa; /* Light background for tooltip in light mode */
+    --tooltip-text: #333; /* Dark text color for light mode */
+  }
+  
+  body.dark-mode {
+    --tooltip-bg: #333; /* Dark background for tooltip in dark mode */
+    --tooltip-text: #4493f8; /* Light text for dark mode */
+  }
+
+
 .navbar {
     display: flex;
     align-items: center;
@@ -15,7 +28,22 @@
     z-index: 1000; 
     
     /* height: 3rem; */
-    /* background-color: red; */
+}
+.back-nav{
+    z-index: -5;
+    position: fixed;
+    top: -40px;
+    /* background-color: rgb(0, 0, 0); */
+    width: 100%;
+    height: 80px;
+    filter: blur(10px);
+}
+.back-nav-dark{
+    background-color: #0d1117;
+}
+.back-nav-light{
+
+    background-color: #f0f6fcae;
 }
 .navbar-container {
     position: relative;
@@ -98,6 +126,38 @@
     /* background-color: red; */
     flex: 0 0 20%; 
 }
+.download-resume{
+    margin-right: 15%;
+}
+
+
+abbr {
+    text-decoration: dotted underline; /* Underline to indicate abbreviation */
+    cursor: pointer; /* Changes cursor to indicate more info */
+    position: relative;
+  }
+
+  abbr[title]::after {
+    content: attr(title); /* Display the title attribute */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    background-color: var(--tooltip-bg); /* Use CSS variables for dynamic styling */
+    color: var(--tooltip-text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, background-color 0.2s, color 0.2s; /* Smooth transitions */
+    z-index: 1000;
+  }
+  
+  abbr[title]:hover::after {
+    opacity: 1; /* Show tooltip on hover */
+  }
 .logo {
     height: 40px; /* Adjust logo size */
     width: 40px;
