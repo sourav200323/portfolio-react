@@ -1,7 +1,7 @@
 import React, { useContext} from 'react'
 import { ThemeContext } from '../assets/ThemeContext';
 import { motion } from 'framer-motion';
-import '../css/experience.css';
+import './experience.css';
 
 function Experience  () {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);

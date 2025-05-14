@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/loading-screen.css'; // Assuming the CSS is in this file
+import './loading-screen.css'; // Assuming the CSS is in this file
 
 const loadingLines = [
     "Initializing environment variables...",

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 // import { Draggable } from 'react-draggable';
-import '../css/contact.css';
+import './contact.css';
 
 const Contact = () => {
   const [step, setStep] = useState(1);

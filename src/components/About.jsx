@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/about.css'
+import './about.css'
 
 function About() {
   return (
@@ -15,7 +15,7 @@ function About() {
                 <p class="note">It would be great to connect with you!</p>
 
                 <div className="button-container">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/akash-bera-5a3009250" target="_blank" rel="noopener noreferrer">
                   <button className="custom-button">
                     <span className="background"></span>
                     <div className="button-content">
@@ -33,7 +33,7 @@ function About() {
                 </a>
 
 
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/akashbera009" target="_blank" rel="noopener noreferrer">
                   <button className="custom-button">
                     <span class="background"></span>
                     <div class="button-content">
@@ -43,6 +43,20 @@ function About() {
                             <path fill="#4493f8" d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z"/>
                           </svg>
                           Github
+                        </p>
+                      </div>
+                    </div>
+                  </button>
+                </a>
+
+                <a href="mailto:akashbera102003@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <button className="custom-button">
+                    <span class="background"></span>
+                    <div class="button-content">
+                      <div class="text-container">
+                        <p class="button-text">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" /><path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" /></svg>
+                          Email
                         </p>
                       </div>
                     </div>

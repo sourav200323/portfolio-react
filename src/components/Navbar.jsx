@@ -1,6 +1,6 @@
     import React, { useContext, useState, useEffect } from 'react';
     import { ThemeContext } from '../assets/ThemeContext';
-    import '../css/navbar.css'; // Ensure the path is correct
+    import './navbar.css'; // Ensure the path is correct
 
     const DesktopNavbar = () => {
         const [activeSection, setActiveSection] = useState('');
@@ -39,10 +39,10 @@
         return (
             <nav className={`navbar `}>
                 <div className={`back-nav ${isDarkMode ? 'back-nav-dark' : 'back-nav-light'}`}/>
-                <div className="navbar-logo">
+                <a href = "" className="navbar-logo">
                     <img src="https://avatars.githubusercontent.com/u/146749055?v=4" alt="Logo" className="logo" />
                     <h1>Akash Bera</h1>
-                </div>
+                </a>
                 <div class="navbar-container">
                     <ul className={`navbar-list ${isDarkMode ? 'navbar-dark' : 'navbar-light' }`}>
                         <li><a href="#about" className={`navbar-link ${activeSection === 'about' ? 'active' : ''} ${isDarkMode ? 'link-dark' : 'link-light'}`}>About</a></li>
@@ -55,7 +55,7 @@
                 </div>
                 <div className="linkedin-and-theme-button">
                     
-                <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className={`navbar-link-linkedin  download-resume ${isDarkMode ? 'link-dark' : 'link-light'}`}>
+                <a href="https://linkedin.com/in/akash-bera-5a3009250" target="_blank" rel="noopener noreferrer" className={`navbar-link-linkedin  download-resume ${isDarkMode ? 'link-dark' : 'link-light'}`}>
                 <abbr title="Download Resume">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
