@@ -3,6 +3,9 @@
   max-width: 450px;
   height: 300px;
   perspective: 1000px;
+  /* background-color: #00894d; */
+  /* position: relative;
+  z-index: 20; */
 }
 
 .card {
@@ -44,12 +47,14 @@
 }
 .sub-skill-list li {
         color: rgb(191, 194, 196);
+        
 }
 .sub-skill-list li {
   position: relative;
   padding-left: 20px;
   margin-bottom: 10px;
   color: #f0f0f0;
+  font-size: 14px;
 }
 .sub-skill-list li::before {
   content: "";
@@ -66,12 +71,13 @@
     /* background-color: red; */
     display: flex;
     gap: .3rem;
+    align-items: baseline;
 }
 .three-card-icon {
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
   color: #fff;
-  padding: 10px;
+  padding: 8px;
   border-radius: 50%;
   font-size: 24px;
   margin-bottom: 15px;
@@ -219,8 +225,23 @@
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   /* background: rgba(0, 249, 203, 0.2); */
-  background:  #ffca8427;
+  /* background:  #ffca8427; */
   transition: all 0.5s ease-in-out;
+}
+.dsa.circle  {
+  background-color: #e8ffc641;
+}
+.cn.circle {
+  background-color: #ffca8434;
+}
+.cc.circle {
+  background-color: #b9e9e93c;
+}
+.sql.circle {
+  background-color: #e0b7f439; 
+}
+.os.circle {
+  background-color: #bfdef33a;
 }
 
 .logo .circle1 {
@@ -259,8 +280,8 @@
 .logo .circle5 {
   width: 110px;
   transform: translate3d(0, 0, 100px);
-  top: 0px;
-  right: 0px;
+  top: 10px;
+  right: 10px;
   display: grid;
   place-content: center;
   transition-delay: 1.6s;

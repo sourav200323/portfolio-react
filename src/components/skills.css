@@ -78,8 +78,14 @@
   justify-content: space-around;
   margin: 1rem;
   /* overflow-x: auto; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   gap: 1rem;
+    overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  /* cursor: grab; */
+
+  scrollbar-width: none; /* Firefox */
 }
 .language-skills-container {
   display: flex;
@@ -112,6 +118,7 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   border: 2px solid transparent;
   transition: all 0.3s ease-in-out;
+  animation : expose .3 
 }
 
 .language-skill-card:hover {
@@ -373,22 +380,26 @@ border-radius: 1rem;
   align-items: center;
   overflow: hidden;
   padding: 1rem;
-  z-index: 2;
+  z-index: 10;
   cursor: pointer;
   /* background-color: blue; */
 }
 
 .stats-container {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 10px;
   min-width: 100%;
   scrollbar-width: none;
+  /* z-index: 11; */
   /* background-color: red; */
 }
-
+.inside-stats-container{
+  position: relative;
+  /* z-index: 10; */
+}
 .stats-container::-webkit-scrollbar {
   display: none;
 }

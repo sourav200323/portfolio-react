@@ -1,6 +1,6 @@
 import React , { useRef, useState , useEffect } from 'react'
 import './skills.css'
-import Threecard from '../css/Threecard'  
+import Threecard from '../SupportingComonent/Threecard'  
 
 function Skills() {
 
@@ -10,6 +10,8 @@ function Skills() {
   const autoScrollTimer = useRef(null);
   const isUserInteracting = useRef(false);
   const inactivityTimer = useRef(null);
+
+
 
   // Check scroll position
   const checkScroll = () => {
@@ -115,6 +117,9 @@ function Skills() {
       const chatgpt = (
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linejoin="round" d="M18.38 27.94v-14.4l11.19-6.46c6.2-3.58 17.3 5.25 12.64 13.33" stroke-width="1"/><path fill="none" stroke="currentColor" stroke-linejoin="round" d="m18.38 20.94l12.47-7.2l11.19 6.46c6.2 3.58 4.1 17.61-5.23 17.61" stroke-width="1"/><path fill="none" stroke="currentColor" stroke-linejoin="round" d="m24.44 17.44l12.47 7.2v12.93c0 7.16-13.2 12.36-17.86 4.28" stroke-width="1"/><path fill="none" stroke="currentColor" stroke-linejoin="round" d="M30.5 21.2v14.14L19.31 41.8c-6.2 3.58-17.3-5.25-12.64-13.33" stroke-width="1"/><path fill="none" stroke="currentColor" stroke-linejoin="round" d="m30.5 27.94l-12.47 7.2l-11.19-6.46c-6.21-3.59-4.11-17.61 5.22-17.61" stroke-width="1"/><path fill="none" stroke="currentColor" stroke-linejoin="round" d="m24.44 31.44l-12.47-7.2V11.31c0-7.16 13.2-12.36 17.86-4.28" stroke-width="1"/></svg>
       )
+    const canva = (
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M33.563 22.611L31.341 28.5l-2.223-5.889M20.9 26.278a2.23 2.23 0 0 1-2.223 2.222h0a2.23 2.23 0 0 1-2.222-2.222v-1.445a2.23 2.23 0 0 1 2.222-2.222h0a2.23 2.23 0 0 1 2.223 2.222m0 3.667v-5.889m6.63 5.889v-3.667a2.23 2.23 0 0 0-2.222-2.222h0a2.23 2.23 0 0 0-2.222 2.222V28.5m0-3.667v-2.222m-8.67 2.889a2.99 2.99 0 0 1-3 3h0a2.99 2.99 0 0 1-3-3v-3a2.99 2.99 0 0 1 3-3h0a2.895 2.895 0 0 1 2.89 3h0m25.278 3.778A2.23 2.23 0 0 1 37.36 28.5h0a2.23 2.23 0 0 1-2.222-2.222v-1.445a2.23 2.23 0 0 1 2.222-2.222h0a2.23 2.23 0 0 1 2.223 2.222m.001 3.667v-5.889" stroke-width="1"/><circle cx="24" cy="24" r="21.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></svg>
+    )
   return (
     <div className="skills-container">
         <h2>Skills </h2>
@@ -128,7 +133,7 @@ function Skills() {
           </div>
           <h6 className="skill-heading">Frontend Development</h6>
           <div className="skill-description">
-            Proficient in <p style={{fontWeight:'700' , color:'#58cddc' , display:' inline'}}>React</p> ,<p style={{fontWeight:'700' , color:'#2965F1' , display:' inline'}}>CSS</p> , and modern web design practices.
+            Proficient in <p style={{fontWeight:'700' , color:'#58cddc' , display:' inline'}}>React</p> ,<p style={{fontWeight:'700' , color:'rgb(99, 102, 241)' , display:' inline'}}>CSS</p> , and modern web design practices.
           </div>
         </div>
         <div className="skill-card">
@@ -146,7 +151,7 @@ function Skills() {
           </div>
           <h6 className="skill-heading">IoT</h6>
           <div className="skill-description">
-            Experienced in IoT development with <p style={{fontWeight:'700' , color:'#00979D' , display:' inline'}}> Arduino</p> , <p style={{fontWeight:'700' , color:'#4B0082' , display:' inline'}}>NodeMCU</p>, and <p style={{fontWeight:'700' , color:'#FFCA28' , display:' inline'}}>Firebase</p> real-time integration
+            Experienced in IoT development with <p style={{fontWeight:'700' , color:'#00979D' , display:' inline'}}> Arduino</p> , <p style={{fontWeight:'700' , color:'#665af0' , display:' inline'}}>NodeMCU</p>, and <p style={{fontWeight:'700' , color:'#FFCA28' , display:' inline'}}>Firebase</p> real-time integration
           </div>
         </div>
         <div className="skill-card">
@@ -162,21 +167,21 @@ function Skills() {
 
    
 
-<div className="bracket-container">
-  <p className='animated-gradient-text'>Languages & Daily Drivers</p>
-  
-    <div className='tool-language-container'>
-      < Tool_Language_Card name = {'Java'} working = {'Programming language & OOPS'} icon= {java}/>
-
-      {/* < Tool_Language_Card name = {'VS Code '} working = {'Code Editor'} icon= {vscode}/> */}
-      < Tool_Language_Card name = {'Firebase'} working = {'App Dev SDK'} icon= {firebase}/>
-      < Tool_Language_Card name = {'JavaScript'} working = {'Programming language for web pages'} icon= {js}/>
-      < Tool_Language_Card name = {'Wordpress'} working = {'Building and managing websitess'} icon= {wordpress}/>
-      < Tool_Language_Card name = {'Chat GPT'} working = {'Building and managing websitess'} icon= {chatgpt}/>
-      < Tool_Language_Card name = {'Github'} working = {'Collaborate on code repositories'} icon= {github}/>
-      < Tool_Language_Card name = {'Github'} working = {'Collaborate on code repositories'} icon= {github}/>
-    </div>
-</div>
+  <div className="bracket-container ">
+    <p className='animated-gradient-text'>Languages & Daily Drivers</p>
+    
+      <div className='tool-language-container'>
+        < Tool_Language_Card name = {'Java'} working = {'Programming language & OOPS'} icon= {java}/>
+   < Tool_Language_Card name = {'Canva'} working = {'Collaborate on code repositories'} icon= {canva}/>
+        < Tool_Language_Card name = {'VS Code '} working = {'Code Editor'} icon= {vscode}/>
+        < Tool_Language_Card name = {'Firebase'} working = {'App Dev SDK'} icon= {firebase}/>
+        < Tool_Language_Card name = {'JavaScript'} working = {'Programming language for web pages'} icon= {js}/>
+        < Tool_Language_Card name = {'Wordpress'} working = {'Building and managing websitess'} icon= {wordpress}/>
+        < Tool_Language_Card name = {'Chat GPT'} working = {'Building and managing websitess'} icon= {chatgpt}/>
+        < Tool_Language_Card name = {'Github'} working = {'Collaborate on code repositories'} icon= {github}/>
+     
+      </div>
+  </div>
   <p className='animated-gradient-text'>Key Subject Mastery</p>
 
 
@@ -185,104 +190,26 @@ function Skills() {
       <button onClick={() => scroll('left')}  className={`scroll-btn left ${!showLeft && 'hidden'}`}><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20" height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 298 511.93"><path fill-rule="nonzero" d="M285.77 441c16.24 16.17 16.32 42.46.15 58.7-16.16 16.24-42.45 16.32-58.69.16l-215-214.47c-16.24-16.16-16.32-42.45-.15-58.69L227.23 12.08c16.24-16.17 42.53-16.09 58.69.15 16.17 16.24 16.09 42.54-.15 58.7l-185.5 185.04L285.77 441z"/></svg></button>
       <div class="stats-container" ref={scrollRef}>
 
-        <div class="stat-card">
-          <div className="stat-header">
-            <div class="stat-icon dsa" />
-            <h3 className=' stat-info-h3'>Problem Solving & DSA</h3>
-          </div>
-          <div class="stat-info">
-            <img className = 'stat-value-img' src="https://i.ibb.co/qM8JV8cp/idea-1.png" alt="" />
-            <p className='stat-change up'>
-              <ul>
-                <li>Proficient in implementing arrays, linked lists, stacks, queues</li>
-                <li>Strong foundation in sorting and searching algorithms</li>
-                <li>Familiar with recursion, greedy algorithms, and divide-and-conquer</li>
-              </ul>
-            </p>
-          </div>
-          <a href="#" class="view-all">View all</a>
-        </div>
 
-       <div class="stat-card">
-          <div className="stat-header">
-            <div class="stat-icon cn" />
-            <h3 className=' stat-info-h3'>Computer Networks</h3>
-          </div>
-          <div class="stat-info">
-            <img className = 'stat-value-img' src="https://i.ibb.co/39FcVNpX/network-switch.png" alt="" />
-            <p className='stat-change up'>
-              <ul>
-                <li>OSI and TCP/IP models</li>
-                <li>IP addressing, subnetting, and routing</li>
-                <li>configuration of routers and switches</li>
-              </ul>
-            </p>
-          </div>
-          <a href="#" class="view-all">View all</a>
-        </div>
-
-        
-        <div class="stat-card">
-          <div className="stat-header">
-            <div class="stat-icon sql" />
-            <h3 className=' stat-info-h3'>Database Management</h3>
-          </div>
-          <div class="stat-info">
-            <img className = 'stat-value-img' src="https://i.ibb.co/M58bqL3Y/sql-2.png" alt="" />
-            {/* <p class="stat-value">23<span class="stat-change up">↑ 122</span></p> */}
-            <p className='stat-change up'>
-              <ul>
-                <li>SQL queries for data retrieval and manipulation</li>
-                <li>Worked with relational databases like MySQL</li>
-                <li>Deploy and serve web applications using Apache</li>
-              </ul>
-            </p>
-          </div>
-          <a href="#" class="view-all">View all</a>
-        </div>
-
-        <div class="stat-card">
-          <div className="stat-header">
-            <div class="stat-icon cc" />
-            <h3 className=' stat-info-h3'>Cloud Computing </h3>
-          </div>
-          <div class="stat-info">
-            <img className = 'stat-value-img' src="https://i.ibb.co/qL5DFDZ3/cloud-server.png" alt="" />
-            <p className='stat-change up'>
-              <ul>
-                <li>Familier with cloud platforms like AWS</li>
-                <li>Deploy web applications on AWS EC2</li>
-                <li>Utilize S3 for media storage</li>
-              </ul>
-            </p>
-          </div>
-          <a href="#" class="view-all">View all</a>
-        </div>
+    <div className='inside-stats-container'></div>
       
- <Threecard/>
-        <div class="stat-card">
-          <div className="stat-header">
-            <div class="stat-icon os" />
-            <h3 className=' stat-info-h3'>Operating System</h3>
-          </div>
-          <div class="stat-info">
-            <img className = 'stat-value-img' src="https://i.ibb.co/rR353GkW/operating-system.png" alt="" />
-            {/* <p class="stat-value">23<span class="stat-change up">↑ 122</span></p> */}
-            <p className='stat-change up'>
-              <ul>
-                <li>OS fundamentals: processes, threads, memory management</li>
-                <li>Understanding of file systems, I/O operations, and system calls</li>
-                <li>Knowledge of scheduling algorithms and deadlock concepts</li>
-              </ul>
-            </p>
-          </div>
-          <a href="#" class="view-all">View all</a>
-        </div>
+ <Threecard title = {'Problem Solving & DSA'} liItem1 ={'Proficient in implementing arrays, linked lists, stacks, queues'} liItem2 = {'Strong foundation in sorting and searching algorithms'} liItem3 = {'Familiar with recursion, greedy algorithms, and divide-and-conquer'}  subCode = {'cn'} iconSource = {'https://i.ibb.co/qM8JV8cp/idea-1.png'} />
+
+ <Threecard title = {'Computer Networks'} liItem1 ={'OSI and TCP/IP models'} liItem2 = {'IP addressing, subnetting, and routing'} liItem3 = {'configuration of routers and switches'}  subCode = {'dsa'} iconSource = {'https://i.ibb.co/39FcVNpX/network-switch.png'} />
+
+ <Threecard title = {'Database Management'} liItem1 ={'SQL queries for data retrieval and manipulation'} liItem2 = {'Worked with relational databases like MySQL'} liItem3 = {'Deploy and serve web applications using Apache'}  subCode = {'sql'} iconSource = {'https://i.ibb.co/M58bqL3Y/sql-2.png'} />
+
+ <Threecard title = {'Cloud Computing'} liItem1 ={'Familier with cloud platforms like AWS'} liItem2 = {'Deploy web applications on AWS EC2'} liItem3 = {'Utilize S3 for media storage'}  subCode = {'cc'} iconSource = {'https://i.ibb.co/qL5DFDZ3/cloud-server.png'} />
+
+ <Threecard title = {'Operating System'} liItem1 ={'OS fundamentals: processes, threads, memory management'} liItem2 = {'Understanding of file systems, I/O operations, and system calls'} liItem3 = {'Knowledge of scheduling algorithms and deadlock concepts'}  subCode = {'os'} iconSource = {'https://i.ibb.co/rR353GkW/operating-system.png'} />
+
+   
+        
         <button onClick={() => scroll('right')} className={`scroll-btn right ${!showRight && 'hidden'}`}><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20" height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 298 511.93"><path fill-rule="nonzero" d="M70.77 499.85c-16.24 16.17-42.53 16.09-58.69-.15-16.17-16.25-16.09-42.54.15-58.7l185.5-185.03L12.23 70.93c-16.24-16.16-16.32-42.45-.15-58.7 16.16-16.24 42.45-16.32 58.69-.15l215.15 214.61c16.17 16.25 16.09 42.54-.15 58.7l-215 214.46z"/></svg></button>
        </div>
       </div>
 
-      <Threecard/>
+      {/* <Threecard/> */}
   
     </div>
   )
