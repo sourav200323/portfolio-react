@@ -110,7 +110,7 @@
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
-                    console.log('Mobile intersecting:', entry.target.id);
+                    // console.log('Mobile intersecting:', entry.target.id);
                     if (entry.isIntersecting) {
                         setActiveSection(entry.target.id);
                     }

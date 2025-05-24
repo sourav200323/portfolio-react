@@ -82,18 +82,42 @@
     /* transform: translateY(10px); */
 }
 
-.navbar-container::before {
+/* .navbar-container::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 40px; /* Same border-radius as container */
-    border: 30px solid #4493f8; /* Border color */
+    border-radius: 40px;
+    border: 30px solid #4493f8; 
     clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
-    z-index: 0; /* Behind the navbar content */
+    z-index: 0; 
+} */
+
+.navbar-container {
+  position: relative;
+  z-index: 1;
+  top: -.3rem;
+  border-radius: 40px;
+  padding: 5px; /* ⬅️ Increased from 30px to make border thicker */
+  box-sizing: border-box;
+  overflow: hidden;
 }
+
+.navbar-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 40px;
+  background: linear-gradient(45deg, #149CEA, #665af0);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  z-index: -1; /* Put behind content */
+}
+
 .navbar-dark {
     background-color: black;
     color: white;
@@ -107,17 +131,24 @@
 .navbar-logo {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     margin: 1% 1.5%;
     flex: 0 0 13%;
-    /* background-color: red; */
     backdrop-filter: blur(8px);
     background-color: #7a7a7a58;
     border: 1px solid #4493f8 ;
     border-radius: 1.2rem;
+    height: 2.5rem;
 }
 
-
+.navbar-logo h1 {
+    color: #665af0  ;
+    margin-right: 2.5rem;
+}
+.navbar-logo img {
+    width: 2.5rem;
+}
 .linkedin-and-theme-button{
     max-width: 10%;
     display: flex;

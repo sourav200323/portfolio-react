@@ -1,7 +1,7 @@
 .parent {
-  min-width: 400px;
-  max-width: 450px;
-  height: 300px;
+  min-width: 350px;
+  max-width: 400px;
+  height: 250px;
   perspective: 1000px;
   /* background-color: #00894d; */
   /* position: relative;
@@ -38,11 +38,12 @@
 .content {
   padding: 50px 60px 0px 30px;
   transform: translate3d(0, 0, 26px);
+  /* background-color: #00894d; */
 }
 .sub-skill-list{
     list-style-type:none ;
-    margin: 1rem;
-    font-family: 'Courier New', Courier, monospace  ;
+    margin: .5rem;
+    /* font-family: 'Courier New', Courier, monospace  ; */
 
 }
 .sub-skill-list li {
@@ -54,7 +55,8 @@
   padding-left: 20px;
   margin-bottom: 10px;
   color: #f0f0f0;
-  font-size: 14px;
+  font-size: 12px ;
+  /* font-size:  0.75rem ; */
 }
 .sub-skill-list li::before {
   content: "";
@@ -67,21 +69,25 @@
   border-radius: 50%;
 }
     
-.three-card-icon-header{
+.three-card-icon-header {
     /* background-color: red; */
     display: flex;
-    gap: .3rem;
+    /* gap: .3rem; */
     align-items: baseline;
+    /* justify-content: center; */
+    width: 90%;
 }
+
 .three-card-icon {
-    width: 3px;
-    height: 3px;
-  color: #fff;
-  padding: 8px;
-  border-radius: 50%;
-  font-size: 24px;
-  margin-bottom: 15px;
-  /* background-color: #ffc984; */
+    width: 2px;
+    height: 2px;
+    color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 20px;
+    /* margin-bottom: 15px; */
+    /* background-color: #ffc984; */
+    margin-right: .5rem;
 }
 
 .dsa.three-card-icon {
@@ -100,11 +106,14 @@
   background-color: #bfdef3;
 }
 
-.content .title {
-  display: block;
-  color:  #4FC3F7;
-  font-weight: 900;
-  font-size: 20px;
+.content {
+   color:  #4FC3F7;
+   /* color:  #665af0; */
+  font-weight: 600;
+  font-size: 16px;
+}
+.title1 {
+  text-align: left;
 }
 
 .content .text {
@@ -144,7 +153,8 @@
   border: none;
   /* color: #00c37b; */
   color:  #4FC3F7;
-  font-weight: bolder;
+  color:   rgba(170, 222, 243, 0.721);
+  /* font-weight: bolder; */
   font-size: 12px;
 }
 
@@ -244,7 +254,7 @@
   background-color: #bfdef33a;
 }
 
-.logo .circle1 {
+/* .logo .circle1 {
   width: 170px;
   transform: translate3d(0, 0, 20px);
   top: 8px;
@@ -275,10 +285,10 @@
   top: 23px;
   right: 23px;
   transition-delay: 1.2s;
-}
+} */
 
 .logo .circle5 {
-  width: 110px;
+  width: 80px;
   transform: translate3d(0, 0, 100px);
   top: 10px;
   right: 10px;

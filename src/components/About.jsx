@@ -81,7 +81,7 @@ function About() {
 
               </div>
               <div class="right-side">
-                <img src="https://i.ibb.co/9YQFc2M/Picsart-24-12-28-14-15-11-867.png" alt="Akash Bera" class="profile-image" />
+                <img src="https://i.ibb.co/9YQFc2M/Picsart-24-12-28-14-15-11-867.png" alt="Akash Bera" class="profile-image" loading='eager' />
               </div>
             </div>
           {/* </section> */}

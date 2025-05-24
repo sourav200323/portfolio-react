@@ -480,6 +480,9 @@ border-radius: 1rem;
 .os.stat-icon{
   background-color: #bfdef3;
 }
+.oops.stat-icon{
+  background-color: #e5f3bf;
+}
 .stat-info{
   display: flex;
   justify-content: center;

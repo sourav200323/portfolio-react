@@ -18,5 +18,14 @@ export const colors = {
         linkColor: '#4493f8', // Blue for links
         buttonColor: '#238636', // Green for buttons
         lessImportantButtonBg: '#212830', // Dark gray for less important buttons
+
+        
     },
 };
+// #238636
+// #4493f8
+// rgb(99, 102, 241);
+// rgba(79, 70, 229, 0.5), rgb(17, 24, 39)
+// #4493f8, #665af0, #4493f8
+// #149CEA 
+// #665af0

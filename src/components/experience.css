@@ -28,7 +28,7 @@
 }
 
 .experience-card {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   border-radius: 10px;
   padding: 25px;
   margin-bottom: 25px;
@@ -36,6 +36,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-left: 5px solid #4493f8; /* Default border color */
   cursor: pointer;
+
 }
 
 .experience-card:hover {
@@ -44,21 +45,21 @@
 }
 
 .experience-card h3 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: #333;
   margin-bottom: 8px;
   font-weight: 600;
 }
 
 .company-name {
-  font-size: 1.3rem;
-  color: #5e72e4; /* Vibrant color for company names */
+  font-size: 1.1rem;
+  color: #5e72e4;
   margin-bottom: 8px;
   font-style: italic;
 }
 
 .duration {
-  font-size: 1.1rem;
+  font-size: .875rem;
   color: #777;
   margin-bottom: 15px;
 }
@@ -73,7 +74,7 @@
 
 /* Dark mode adjustments */
 .navbar-dark .experience-card {
-  background-color: #333;
+  background-color: #1e1e2f;
   color: #fff;
   border-left: 5px solid #4493f8; /* Accent color in dark mode */
 }
@@ -83,7 +84,6 @@
 }
 
 .navbar-dark .company-name {
-  color:  #4493f8; /* Light accent color in dark mode */
 }
 
 .navbar-dark .duration,

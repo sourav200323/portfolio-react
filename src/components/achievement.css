@@ -1,0 +1,384 @@
+.achievement-main-container{
+    /* background-color: black; */
+    min-height: 100vh;
+}
+
+
+/* CodePen Card, themed & namespaced */
+/* InteractiveCard.css */
+
+/* Card container */
+.achievement-card-main {
+  display: inline-block;
+  position: relative;
+  font-family: sans-serif;
+}
+
+/* The card face */
+.achievement-card-card {
+  width: 15em;
+  height: 10em;
+  background: linear-gradient(
+    270deg,
+    #4493f8,
+    rgb(99, 102, 241),
+    #665af0,
+    #149cea,
+    rgba(79, 70, 229, 0.5),
+    rgb(17, 24, 39)
+  );
+  background-size: 800% 800%;
+  animation: AnimationName 3s ease infinite;
+  transition: transform .4s ease-in-out;
+  border-radius: 7px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Back overlay for 3D effect */
+.achievement-card-card_back {
+  position: absolute;
+  top: 0; left: 0;
+  width: 15em;
+  height: 10em;
+  /* background-color: rgba(17, 24, 39, 0.6); */
+  border-radius: 7px;
+  transform: translate(0.7em, -4.7em);
+  transition: transform .2s ease-in-out;
+  z-index: -1;
+}
+
+/* When hovering the main container */
+.achievement-card-main:hover .achievement-card-card {
+  transform: translateY(-0.3em);
+}
+.achievement-card-main:hover .achievement-card-card_back {
+  transform: translate(0, -5.9em) scale(1.1);
+}
+
+/* Fullscreen icon wrapper */
+.achievement-card-fl {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+.achievement-card-main:hover .achievement-card-fl {
+  opacity: 1;
+}
+
+/* Fullscreen icon box */
+.achievement-card-fullscreen {
+  width: 1.5em;
+  height: 1.5em;
+  margin: 1em .5em 0 1em;
+  background-color: rgba(79, 70, 229, 0.5);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+}
+.achievement-card-fl:hover .achievement-card-fullscreen {
+  transform: scale(1.2);
+}
+
+/* Fullscreen SVG */
+.achievement-card-fullscreen_svg {
+  width: 1em;
+  height: 1em;
+  fill: rgb(99, 102, 241);
+  transition: fill .2s ease-in-out;
+}
+.achievement-card-fl:hover .achievement-card-fullscreen_svg {
+  fill: #4493f8;
+}
+
+/* Data row under card */
+.achievement-card-data {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+/* Avatar box */
+.achievement-card-img {
+  width: 2.25em;
+  height: 2.25em;
+  background-color: rgb(17, 24, 39);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Text details */
+.achievement-card-text {
+  margin-left: 0.5em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+}
+.achievement-card-text_m {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.achievement-card-text_s {
+  font-size: 0.7em;
+}
+
+/* Buttons row */
+.achievement-card-btns {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 0.5em;
+  opacity: 0;
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+}
+.achievement-card-main:hover .achievement-card-btns {
+  opacity: 1;
+  transform: translateY(-0.5em);
+}
+
+/* Individual icon buttons */
+.achievement-card-likes,
+.achievement-card-comments,
+.achievement-card-views {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(17, 24, 39);
+  border-radius: 4px;
+  height: 1.4em;
+  transition: background-color .2s ease-in-out;
+}
+.achievement-card-likes { width: 2.5em; }
+.achievement-card-comments { width: 2.5em; }
+.achievement-card-views    { width: 3em;    }
+
+.achievement-card-likes_svg,
+.achievement-card-comments_svg,
+.achievement-card-views_svg {
+  width: 0.75em;
+  height: 0.75em;
+  fill: white;
+}
+.achievement-card-likes_text,
+.achievement-card-comments_text,
+.achievement-card-views_text {
+  margin-left: 0.25em;
+  font-size: 0.8em;
+  color: white;
+  font-family: Montserrat, sans-serif;
+}
+
+/* Hover on each icon */
+.achievement-card-likes:hover,
+.achievement-card-comments:hover,
+.achievement-card-views:hover {
+  background-color: #665af0;
+  cursor: pointer;
+}
+
+/* The “Code to Infinity!” button area */
+.achievement-card-card_content {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+/* The button itself */
+.achievement-card-card_content button {
+  padding: 0.8em;
+  width: 14em;
+  border-radius: 10px;
+  border: 1px solid #4493f8;
+  background: transparent;
+  color: #4493f8;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: 0.8em;
+  position: relative;
+  transition: background .4s ease-in-out, color .4s ease-in-out, transform .2s ease-in-out;
+}
+.achievement-card-card_content button::before {
+  content: "∞";
+  position: absolute;
+  top: -0.36em;
+  left: 1.6em;
+  font-size: 3.5em;
+  opacity: 0;
+  transition: opacity .4s ease-in-out;
+}
+.achievement-card-card_content button::after {
+  content: "(Hold Me)";
+  position: absolute;
+  opacity: 0;
+  transition: opacity .4s ease-in-out;
+}
+
+/* Hover state */
+.achievement-card-card_content button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: black;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+}
+.achievement-card-card_content button:hover::after {
+  opacity: 1;
+  font-size: 0.7em;
+}
+
+/* Active (held) state */
+@keyframes AnimationName {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.achievement-card-card_content button:active {
+  transform: scale(1.1);
+  color: white;
+  background: linear-gradient(
+    90deg,
+    #4493f8,
+    rgb(99, 102, 241),
+    #665af0,
+    #149cea
+  );
+  background-size: 800% 800%;
+  animation: AnimationName 1s ease infinite;
+}
+.achievement-card-card_content button:active::before {
+  opacity: 1;
+}
+
+
+
+
+
+
+ /* grid layout */
+.outer-div {
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically (optional) */
+  padding: 2rem; 
+}
+/* .dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 16px;
+  padding: 20px;
+} */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px; /* control max size */
+}
+.dashboard-item {
+  background: linear-gradient(135deg, #2a2a3d, #1e1e2f);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  color: #e0e0e0;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dashboard-item.tall {
+  grid-column: span 1;
+  grid-row: span 2;  /* Makes it taller */
+}
+
+.dashboard-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 150, 255, 0.4);
+
+}
+
+.dashboard-item .icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+  color: #00aaff;
+  text-shadow: 0 2px 6px rgba(0, 170, 255, 0.5);
+}
+
+.dashboard-item p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 6px;
+  transition: border-color 0.3s ease;
+  max-width: 90%;
+}
+
+.dashboard-item:hover p {
+  border-bottom: 2px solid #00aaff;
+}
+
+.dashboard-item.large p {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.dashboard-item.medium-large p {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.dashboard-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.dashboard-item.medium-large {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.dashboard-item.medium {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.dashboard-item.small {
+  grid-column: span 1;
+  grid-row: span 1;
+  font-size: 0.9em;
+}
+
+
+.dashboard-item .subtitle {
+  color: #a0a0b0;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+
+@media (max-width: 1200px) {
+
+  .dashboard-item.tall {
+    grid-row: span 1; /* flatten tall items for better stacking */
+  }
+}
+
+@media (max-width: 625px) {
+    .dashboard-item.tall {
+    grid-column: span 2; /* flatten tall items for better stacking */
+  }
+}
+

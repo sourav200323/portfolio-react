@@ -202,6 +202,7 @@ function Skills() {
  <Threecard title = {'Cloud Computing'} liItem1 ={'Familier with cloud platforms like AWS'} liItem2 = {'Deploy web applications on AWS EC2'} liItem3 = {'Utilize S3 for media storage'}  subCode = {'cc'} iconSource = {'https://i.ibb.co/qL5DFDZ3/cloud-server.png'} />
 
  <Threecard title = {'Operating System'} liItem1 ={'OS fundamentals: processes, threads, memory management'} liItem2 = {'Understanding of file systems, I/O operations, and system calls'} liItem3 = {'Knowledge of scheduling algorithms and deadlock concepts'}  subCode = {'os'} iconSource = {'https://i.ibb.co/rR353GkW/operating-system.png'} />
+ <Threecard title = {'Object Oriented Programming (OOPS)'} liItem1 ={'Wrote clean, reusable code using encapsulation and inheritance'} liItem2 = {'Simplified complexity through abstraction.'} liItem3 = {'Built flexible systems with polymorphism.'}  subCode = {'oops'} iconSource = {'https://i.ibb.co/HT5BptfG/oops.png'} />
 
    
         
