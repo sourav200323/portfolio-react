@@ -1,14 +1,42 @@
-  import React from 'react'
+  import React , { useContext} from 'react'
   import './achievement.css' ; 
-  function Achievements() {
+import { ThemeContext } from '../assets/ThemeContext';
 
+  function Achievements() {
+ const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const portfolioItems = [
-    { title: 'AceHack: Rank #2 in College', size: 'large', icon: '🏆', subtitle: 'Top 2 out of 300 participants' },
-    { title: 'TechUtopia: Organizer Panel', size: 'medium', icon: '💻', subtitle: 'Led the backend team' },
-      { title: 'Research Paper: AI Ethics', size: 'medium', icon: '📄', subtitle: 'Published in Journal X' },
-      { title: 'Contributor: Open Source Tool', size: 'tall', icon: '📊', subtitle: '100+ merged PRs' },
-    { title: 'Guest Speaker: DevCon 2024', size: 'medium-large', icon: '🎤', subtitle: 'Talk on Future Tech' },
-  ];
+  {
+    title: '🏆 AceHack 4.0 — Ranked Top 15 in All-India Inter-College Hackathon',
+    size: 'large',
+    subtitle: 'Placed among the top 15 out of 300+ participating teams'
+  },
+  {
+    title: '💻 TechUtopia — Website for College Fest',
+    size: 'medium',
+    subtitle: 'Led the backend team to build and deploy a fully functional event site'
+  },
+  {
+    title: '📄 Research Paper — DWWP System',
+    size: 'medium',
+    subtitle: 'Published in Springer as part of a smart IoT systems conference'
+  },
+  {
+    title: '☁️ AWS Certification',
+    size: 'tall',
+    subtitle: 'Gained hands-on experience in Amazon AWS through SysOps certification'
+  },
+  {
+    title: '📊 NPTEL Certifications',
+    size: 'tall',
+    subtitle: 'Certified in Python, Data Science with Python, and C Programming with an average score of 80%'
+  },
+  {
+    title: '🎤 Organizer — AceHack 2.0 & 3.0',
+    size: 'medium-large',
+    subtitle: 'Contributed as a technical team member and helped successfully execute the events'
+  }
+];
+
 
 
     return (
@@ -19,13 +47,13 @@
     in techutopia <br />
     researchpaper publish <br />  */}
   {/* <InteractiveCard/> */}
-  <div className="outer-div">
+  <div className={`outer-div `}>
       <div className="dashboard-grid">
         {portfolioItems.map((item, index) => (
-          <div key={index} className={`dashboard-item ${item.size}`}>
-            <span className="icon">{item.icon}</span>
-            <p>{item.title}</p>
-            {item.subtitle && <small className="subtitle">{item.subtitle}</small>}
+          <div key={index} className={`dashboard-item ${item.size} ${isDarkMode ? 'achievement-dark' : 'achievement-light'}`}>
+            <span className={`icon`}>{item.icon}</span>
+            <p className={` ${isDarkMode ? 'achievement-dark-title' : 'achievement-light-title'}`}>{item.title}</p>
+            {item.subtitle && <small className= {`subtitle ${isDarkMode ? 'achievement-dark-sub' : 'achievement-light-sub'}`}>{item.subtitle}</small>}
           </div>
         ))}
 

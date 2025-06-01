@@ -89,7 +89,6 @@
     /* background-color: #ffc984; */
     margin-right: .5rem;
 }
-
 .dsa.three-card-icon {
   background-color: #e8ffc6;
 }
@@ -238,11 +237,14 @@
   /* background:  #ffca8427; */
   transition: all 0.5s ease-in-out;
 }
-.dsa.circle  {
+.cn.circle  {
   background-color: #e8ffc641;
+    /* padding: 1rem;
+    background-color: red; */
 }
-.cn.circle {
+.dsa.circle {
   background-color: #ffca8434;
+
 }
 .cc.circle {
   background-color: #b9e9e93c;
@@ -295,6 +297,10 @@
   display: grid;
   place-content: center;
   transition-delay: 1.6s;
+}
+.logo .circle .circle5 .cn{
+  margin: 2rem;
+  background-color: red;
 }
 
 .logo .circle5 .svg {

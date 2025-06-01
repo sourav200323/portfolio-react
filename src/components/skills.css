@@ -257,7 +257,7 @@
 
 
 
-.animated-gradient-text {
+/* .animated-gradient-text {
   background: linear-gradient(90deg, #4493f8, #665af0, #4493f8);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -267,6 +267,7 @@ font-size: 1.2rem;
 font-family: 'Courier New', Courier, monospace;
 font-weight: 900;
 border-radius: 1rem;
+
   animation: gradient-shift 3s linear infinite;
 
 }
@@ -274,10 +275,54 @@ border-radius: 1rem;
 @keyframes gradient-shift {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
+} */
+
+
+/* 
+.header-badge {
+  width: 30%;
+  background: rgba(20, 156, 234, 0.1);
+  color: #149cea;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin: .3rem;
+  
+} */
+.animated-gradient-text {
+  background: linear-gradient(90deg, #4493f8, #665af0, #4493f8);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  animation: gradient-shift 3s linear infinite;
+
+  /* Ensures gradient text stays visible over badge bg */
+  display: inline-block;
+  position: relative;
 }
 
+@keyframes gradient-shift {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
 
-
+.header-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: rgba(20, 156, 234, 0.1); /* Light badge bg */
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin: 0.3rem;
+}
 
 
 

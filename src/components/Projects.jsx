@@ -10,9 +10,9 @@ const project = [{
   linkedinLink: "https://linkedin.com/in/yourname",
   liveDemo: "https://yourportfolio.com",
   images: [
-    "/images/screen1.png",  
-    "/images/screen2.png",
-    "/images/screen3.png"
+  './public/project-img/dwp-black-log.png',
+  './public/project-img/Screenshot 2024-07-31 182100.png',
+  './public/project-img/Screenshot 2025-03-28 100546.png',
   ],
   description: "A personal portfolio website to showcase my projects and skills.",
   techStack: ["React", "CSS", "Framer Motion", "EmailJS"],
@@ -123,7 +123,7 @@ function Projects() {
   
         <div className="alter-prjt-top-section">
           <div className="alter-prjt-border"></div>
-          <ImageSlideShow/>
+          <ImageSlideShow img1={proj.images[0]} img2={proj.images[1]} img3={proj.images[2]} />
 
           <div className="alter-prjt-icons">
         

@@ -5,6 +5,7 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 }
 
 .experience-container h2 {
@@ -25,19 +26,24 @@
 
 .experience-list {
   margin-top: 20px;
+  background-color: transparent;
 }
 
 .experience-card {
   /* background-color: #ffffff; */
-  border-radius: 10px;
+  width: 80%;
+  border-radius: 20px;
+  margin:  0 auto;
   padding: 25px;
   margin-bottom: 25px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 5px solid #4493f8; /* Default border color */
+
+
   cursor: pointer;
 
 }
+
 
 .experience-card:hover {
   transform: translateY(-5px); /* Slight lifting effect */
@@ -76,9 +82,20 @@
 .navbar-dark .experience-card {
   background-color: #1e1e2f;
   color: #fff;
-  border-left: 5px solid #4493f8; /* Accent color in dark mode */
+  /* border-left: 5px solid #4493f8;  */
+    border-left: 8px solid #665af0; 
 }
-
+/* .experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 97%;
+  background: linear-gradient(to bottom, #4493f8, #665af0);
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+} */
 .navbar-dark h3 {
   color: #fff;
 }

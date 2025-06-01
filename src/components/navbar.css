@@ -100,7 +100,7 @@
   z-index: 1;
   top: -.3rem;
   border-radius: 40px;
-  padding: 5px; /* ⬅️ Increased from 30px to make border thicker */
+  padding: 2px; /* ⬅️ Increased from 30px to make border thicker */
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -327,16 +327,24 @@ abbr {
     .navbar-link:hover {
         color: #4493f8; /* Change link color on hover */
     }
-
+    .mobile-dual-buton-list{
+        display: flex;
+        gap: 5rem;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+    }
     .theme-toggle {
         display: block;
-        margin: 10px auto; 
+        /* margin: 10px auto;  */
+        margin-left: 2rem;
+
         padding: 10px; 
         border: none;
         background: transparent;  
         cursor: pointer;  
         color: inherit;  
         /* background-color: red; */
+
   
     }
 

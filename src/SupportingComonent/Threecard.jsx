@@ -28,14 +28,7 @@ export default function Threecard({title  , liItem1 , liItem2, liItem3 , subCode
                     <li>{liItem3}</li>
                 </ul>
             </div>
-            <div class="bottom">
-                
-               
-                {/* <div class="view-more">
-                    <button class="view-more-button">View more</button>
-                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
-                </div> */}
-            </div>
+            <div class="bottom"></div>
         </div>
     </div>
   )

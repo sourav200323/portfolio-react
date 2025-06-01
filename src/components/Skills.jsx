@@ -124,7 +124,8 @@ function Skills() {
     <div className="skills-container">
         <h2>Skills </h2>
         
-  <p className='animated-gradient-text'>Primary Technical Domains</p>
+  <div className="header-badge"><p className='animated-gradient-text'>Primary Technical Domains</p></div>
+
       
       <div className="skills-grid">
         <div className="skill-card">
@@ -168,7 +169,7 @@ function Skills() {
    
 
   <div className="bracket-container ">
-    <p className='animated-gradient-text'>Languages & Daily Drivers</p>
+    <div className="header-badge"><p className='animated-gradient-text'>Languages & Daily Drivers</p></div>
     
       <div className='tool-language-container'>
         < Tool_Language_Card name = {'Java'} working = {'Programming language & OOPS'} icon= {java}/>
@@ -182,7 +183,7 @@ function Skills() {
      
       </div>
   </div>
-  <p className='animated-gradient-text'>Key Subject Mastery</p>
+  <div className="header-badge"><p className='animated-gradient-text'>Key Subject Mastery</p></div>
 
 
     <div className="stats-wrapper">
@@ -193,9 +194,9 @@ function Skills() {
 
     <div className='inside-stats-container'></div>
       
- <Threecard title = {'Problem Solving & DSA'} liItem1 ={'Proficient in implementing arrays, linked lists, stacks, queues'} liItem2 = {'Strong foundation in sorting and searching algorithms'} liItem3 = {'Familiar with recursion, greedy algorithms, and divide-and-conquer'}  subCode = {'cn'} iconSource = {'https://i.ibb.co/qM8JV8cp/idea-1.png'} />
+ <Threecard title = {'Problem Solving & DSA'} liItem1 ={'Proficient in implementing arrays, linked lists, stacks, queues'} liItem2 = {'Strong foundation in sorting and searching algorithms'} liItem3 = {'Familiar with recursion, greedy algorithms, and divide-and-conquer'}  subCode = {'dsa'} iconSource = {'https://i.ibb.co/qM8JV8cp/idea-1.png'} />
 
- <Threecard title = {'Computer Networks'} liItem1 ={'OSI and TCP/IP models'} liItem2 = {'IP addressing, subnetting, and routing'} liItem3 = {'configuration of routers and switches'}  subCode = {'dsa'} iconSource = {'https://i.ibb.co/39FcVNpX/network-switch.png'} />
+ <Threecard title = {'Computer Networks'} liItem1 ={'OSI and TCP/IP models'} liItem2 = {'IP addressing, subnetting, and routing'} liItem3 = {'configuration of routers and switches'}  subCode = {'cn'} iconSource = {'https://i.ibb.co/39FcVNpX/network-switch.png'} />
 
  <Threecard title = {'Database Management'} liItem1 ={'SQL queries for data retrieval and manipulation'} liItem2 = {'Worked with relational databases like MySQL'} liItem3 = {'Deploy and serve web applications using Apache'}  subCode = {'sql'} iconSource = {'https://i.ibb.co/M58bqL3Y/sql-2.png'} />
 

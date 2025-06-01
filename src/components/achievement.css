@@ -265,6 +265,7 @@
   justify-content: center;   /* centers horizontally */
   align-items: center;       /* centers vertically (optional) */
   padding: 2rem; 
+  margin: 4rem;
 }
 /* .dashboard-grid {
   display: grid;
@@ -281,9 +282,32 @@
   width: 100%;
   max-width: 1200px; /* control max size */
 }
-.dashboard-item {
+.achievement-dark{
   background: linear-gradient(135deg, #2a2a3d, #1e1e2f);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.achievement-light{
+  background:rgb(209, 209, 209) ; 
+  color: #1e1e2f;
+}
+.achievement-dark-title{
+  color: #e0e0e0;;
+}
+.achievement-light-title{
+  color: #252525;;
+}
+.achievement-dark-sub{
+  color: #e0e0e0;
+   color: #a0a0b0; 
+}
+.achievement-light-sub{
+  color: #000000;
+  color:  #4493f8; 
+}
+.dashboard-item {
+  /* background: linear-gradient(135deg, #2a2a3d, #1e1e2f); */
+    box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.7),    /* dark inset at bottom-right */
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05); /* subtle light inset at top-left */
   color: #e0e0e0;
   border-radius: 16px;
   padding: 24px 20px;
@@ -296,13 +320,20 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .dashboard-item.tall {
-  grid-column: span 1;
+  grid-column: span 2;
   grid-row: span 2;  /* Makes it taller */
 }
 
 .dashboard-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 30px rgba(0, 150, 255, 0.4);
+   box-shadow:
+    /* 1) Dark inset in bottom‐right */
+    inset 4px 4px 8px rgba(0, 0, 0, 0.7),
+    /* 2) Light inset in top‐left */
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05),
+    /* 3) Outset blue glow */
+    0 8px 30px rgba(0, 150, 255, 0.4);
+  
 
 }
 
@@ -316,7 +347,7 @@
 .dashboard-item p {
   margin: 0;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: .85rem;
   letter-spacing: 0.03em;
   border-bottom: 2px solid transparent;
   padding-bottom: 6px;
@@ -361,24 +392,94 @@
 
 
 .dashboard-item .subtitle {
-  color: #a0a0b0;
+  /* color: #a0a0b0; */
   font-size: 0.9rem;
   margin-top: 6px;
   font-weight: 400;
   opacity: 0.8;
 }
 
+@media (min-width: 1118px) and (max-width: 1300px) {
+  /* ==== Your CSS rules for screens 1118px–1300px wide ==== */
 
-@media (max-width: 1200px) {
-
-  .dashboard-item.tall {
-    grid-row: span 1; /* flatten tall items for better stacking */
+  /* Example: change the dashboard‐grid to 3 columns in this range */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
   }
+
+  /* Example: make “large” items span all 3 columns */
+  .dashboard-item.large {
+    grid-column: 1 / -1;   /* covers columns 1–3 */
+    grid-row: span 2;      /* e.g. two row‐heights tall */
+  }
+
+  /* Example: adjust font‐size or padding for medium items */
+  .dashboard-item.medium {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  /* …any other overrides you need… */
 }
+
 
 @media (max-width: 625px) {
-    .dashboard-item.tall {
-    grid-column: span 2; /* flatten tall items for better stacking */
+  .dashboard-item p {
+    /* 1) force the element to act like a 2-line vertical box */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;     /* show at most 2 lines */
+    
+    /* 2) hide any overflow beyond those 2 lines */
+    overflow: hidden;
+
+    /* 3) ensure long words still break if needed */
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+    /* (optional) reduce font-size a bit */
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .dashboard-grid {
+    display: grid;                                  /* ensure it’s still a grid */
+    grid-template-columns: repeat(2, 1fr);          /* exactly 2 columns of equal width */
+    grid-auto-rows: 150px;                          /* each implicit row = 150px tall */
+    gap: 1rem;                                      /* same gap you had above */
+    width: 100%;                                    /* fill the screen width */
+    padding: 0 1rem;                                /* optional: small side padding */
+  }
+
+  /* 2) Large items → full width (both columns), 2 rows tall (300px) */
+  .dashboard-item.large {
+    grid-column: 1 / -1;    /* start at col 1, end at last col (2) ⇒ 100% width */
+    grid-row: span 2;       /* 2 × 150px = 300px tall */
+  }
+
+  /* 3) Tall items → full width (both columns), 1 row tall (150px) */
+  .dashboard-item.tall {
+    grid-column: 1 / -1;    /* full width */
+    grid-row: span 1;       /* 1 × 150px = 150px tall */
+  }
+
+  /* 4) Medium items → half width (1 column), 1 row tall (150px) */
+  .dashboard-item.medium {
+    grid-column: span 1;    /* only 1 column out of 2 ⇒ 50% width */
+    grid-row: span 1;       /* 1 × 150px = 150px tall */
+  }
+
+  /* 5) (Optional) Small items behave like “medium” on mobile */
+  .dashboard-item.small {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  /* 6) Remove any “outer-div” overrides if they were only for mobile */
+  .outer-div {
+    margin: 0;             /* you can keep this if you want zero margin on mobile */ 
+    padding: 0;            /* or remove if you prefer no change */
   }
 }
-
