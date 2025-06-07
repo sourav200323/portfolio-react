@@ -6,10 +6,6 @@ export default function Threecard({title  , liItem1 , liItem2, liItem3 , subCode
   <div class="parent">
         <div class="card">
             <div class="logo">
-                {/* <span class="circle circle1"></span>
-                <span class="circle circle2"></span>
-                <span class="circle circle3"></span>
-                <span class="circle circle4"></span> */}
                 <span className ={`circle circle5 ${subCode}`}>
                       <img src={iconSource}  style = {{height : '80px' , padding : '4px'}}alt="" loading='lazy'/>
                 </span>

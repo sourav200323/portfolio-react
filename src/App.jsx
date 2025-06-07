@@ -15,6 +15,8 @@ import LoadingScreen from './components/LoadingScreen';
 
 import Footer from './components/Contact';
 import Achievements from './components/Achievements';
+import Hobbies from './components/Hobbies';
+import Education from './components/Education'
 
 // import Master_card_stack from './components/Master_card_stack' ;
 
@@ -50,6 +52,18 @@ const MainContent = () => {
       >
         <section id="about">
             <About/>
+        </section>
+      </motion.div>
+
+      <motion.div
+        className="section"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5 }}
+      >
+        <section id="education">
+              <Education/>
         </section>
       </motion.div>
 
@@ -98,6 +112,18 @@ const MainContent = () => {
       >
         <section id="achievements">
             <Achievements/>
+        </section>
+      </motion.div>
+
+      <motion.div
+        className="section"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5 }}
+      >
+        <section id="hobbies">
+            <Hobbies/>
         </section>
       </motion.div>
 

@@ -45,47 +45,43 @@ function Experience  () {
           </motion.div>
         ))}
       </div>
+
+
+    <h3 className={`hackathons-subsection   ${isDarkMode ? 'dark' : 'light'}`}>Hackathons</h3>
+    <div class="hackathon-grid">
+      <div class={`hackathon-card  ${isDarkMode ? 'dark' : 'light'}`}>
+        <h4>CodeStorm Hackathon 2024</h4>
+        <p class={`hackathon-date  ${isDarkMode ? 'dark' : 'light'}`}>June 2024</p>
+        <p class="hackathon-role">Team Lead & Frontend Developer</p>
+        <p class="hackathon-achievements">
+          Developed a real-time collaborative task management app. Won <strong>1st Place</strong> for innovative use of WebSocket technology.
+        </p>
+        <div class={`hackathon-tech ${isDarkMode ? 'dark' : 'light'}`}>
+          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>React</span>
+          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>Node.js</span>
+          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>WebSocket</span>
+        </div>
+        <a href="https://github.com/your-repo/codestorm" class={`hackathon-link1  ${isDarkMode ? 'dark' : 'light'}`} target="_blank">View Project</a>
+      </div>
+      
+      <div class="hackathon-card">
+        <h4>AI Innovate Hackathon 2023</h4>
+        <p class="hackathon-date">November 2023</p>
+        <p class="hackathon-role">Backend Developer</p>
+        <p class="hackathon-achievements">
+          Built an AI-powered chatbot for mental health support. Awarded <strong>Best Use of AI</strong>.
+        </p>
+        <div class="hackathon-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">TensorFlow</span>
+        </div>
+        <a href="https://github.com/your-repo/ai-innovate" class="hackathon-link" target="_blank">View Project</a>
+      </div>
+    </div>
+
     </div>
   );
 }
 
-export default Experience  
-
-
-// import React from 'react';
-// import { motion } from 'framer-motion';
-// import '../css/experience.css';
-
-// const Experience = () => {
-//   const cardVariants = {
-//     initial: { opacity: 0, scale: 0.8, y: 100 }, // Start off-screen
-//     inView: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4 } },
-//     outOfView: { opacity: 0, scale: 0.8, y: 100, transition: { duration: 0.2 } }, // Fade out and shrink when out of view
-//   };
-
-//   return (
-//     <div className="experience-card-container">
-//       <ul className="experience-cards">
-//         {[1, 2, 3, 4].map((card, index) => (
-//           <motion.li
-//             className="experience-card"
-//             key={card}
-//             initial="initial"
-//             whileInView="inView"
-//             onViewportLeave={(e) => e.start("outOfView")} // Manually trigger outOfView when leaving viewport
-//             variants={cardVariants}
-//             viewport={{ once: false, amount: 0.5 }} // Detect multiple times
-//             style={{ zIndex: 10 + index, top: `${index * 5}vh` }}
-//           >
-//             <div className="experience-card-body">
-//               <h1>Card {card}</h1>
-//             </div>
-//           </motion.li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default Experience;
-
+export default Experience  ;

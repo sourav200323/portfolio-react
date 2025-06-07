@@ -1,6 +1,7 @@
   import React , { useContext} from 'react'
   import './achievement.css' ; 
 import { ThemeContext } from '../assets/ThemeContext';
+  // import Hobbies  from '../components/Hobbies';
 
   function Achievements() {
  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
@@ -42,11 +43,7 @@ import { ThemeContext } from '../assets/ThemeContext';
     return (
   <div className='achievement-main-container'>
     <h2>Achievements</h2>
-    {/* in acehack website <br />
-    rank in college <br />
-    in techutopia <br />
-    researchpaper publish <br />  */}
-  {/* <InteractiveCard/> */}
+
   <div className={`outer-div `}>
       <div className="dashboard-grid">
         {portfolioItems.map((item, index) => (
@@ -58,7 +55,7 @@ import { ThemeContext } from '../assets/ThemeContext';
         ))}
 
       </div>
-</div>
+    </div>
   </div>
     )
   }

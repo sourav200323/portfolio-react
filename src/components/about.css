@@ -150,7 +150,6 @@
 .custom-button .button-content {
   position: relative;
   z-index: 2;
-  background-color: black; /* Black background */
   border: 2px solid #4493f8; /* Border color matches the background */
   border-radius: 8px; /* Rounded corners */
   padding: 0 16px; /* Horizontal padding for text */
@@ -169,6 +168,15 @@
 /* Hover effect for the button */
 .custom-button:hover .button-content {
   transform: translate(-6px, -12px); /* Slight movement on hover */
+}
+.button-content{
+  /* background-color: rebeccapurple; */
+}
+.button-content.dark { 
+  background-color: black; 
+}
+.button-content.light { 
+  background-color: rgb(210, 210, 210); 
 }
 
 .custom-button:hover .background {

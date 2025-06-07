@@ -1,0 +1,161 @@
+.dark-theme {
+  /* background-color: #121212; */
+  color: #e0e0e0;
+}
+
+.education-container {
+  /* padding: 2rem; */
+  /* max-width: 1200px; */
+  /* max-height:50vh ; */
+  overflow: hidden;
+  margin: 0 auto;
+  /* background-color: rebeccapurple; */
+}
+
+.section-title {
+  text-align: center;
+  /* margin-bottom: 2rem; */
+  color: rgb(99, 102, 241);
+
+  font-size: 2rem;
+}
+
+.timeline-wrapper {
+  width: 100%;
+  overflow: visible;
+  /* background-color: red ; */
+  margin-top: -2rem;
+}
+
+.timeline-svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.school-circle {
+  fill: #bb86fc;
+   fill:rgb(99, 102, 241);
+  stroke: #3700b3;
+  stroke-width: 3;
+  transition: all 0.3s ease;
+}
+
+.school-item:hover .school-circle {
+  fill: #3700b3;
+  stroke:  rgb(99, 102, 241);;
+  transform: scale(1.05);
+}
+
+.school-name {
+  text-anchor: middle;
+  fill: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+
+.school-details {
+  text-anchor: middle;
+  fill: #b3b3b3;
+  font-size: 12px;
+  /* color: white; */
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin: .3rem;
+}
+
+.arrow-path {
+  stroke: #03dac6;
+  stroke: #238636;
+  stroke: #4493f8;
+  stroke-width: 3;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear forwards;
+}
+
+.arrowhead {
+  fill: #03dac6;
+  fill: #238636;
+  fill: #4493f8;
+   /* transition: all 0.3s ease;
+  stroke: #bb86fc;
+  stroke-width: 0.5; */
+}
+
+.glass-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .education-container {
+    padding: 1rem;
+  }
+  
+  .timeline-svg {
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+}   
+
+
+/* Mobile-specific styles */
+.timeline-wrapper-mobile {
+  max-width: 400px; /* same as SVG viewBox width */
+  margin: 0 auto;
+  margin-left: 0%;
+  /* background-color: #03dac6; */
+  margin-left: 10%;
+}
+
+.mobile-timeline {
+  width: 100%; /* fill the container */
+  height: auto; /* keep aspect ratio */
+  display: block;
+  /* background-color: #03dac6; */
+
+}
+
+
+
+.mobile-arrow {
+  stroke: #03dac6;
+  stroke: #4493f8;
+  stroke-width: 2.5;
+  fill: none;
+  animation: dash 2.5s linear forwards;
+}
+
+@media (max-width: 768px) {
+  .school-name {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .school-details {
+    display: none; /* Hide details on mobile for simplicity */
+  }
+
+}
+
+
