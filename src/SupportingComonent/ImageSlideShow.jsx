@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './imageSlideshow.css'; // Import the CSS
 
-const images = [
-  // './public/project-img/dwp-black-log.png',
-  // './public/project-img/Screenshot 2024-07-31 182100.png',
-  // './public/project-img/Screenshot 2025-03-28 100546.png'
-];
-
 const ImageSlideshow = ({img1 , img2 , img3 }) => {
   const images = [img1, img2, img3];
   const [current, setCurrent] = useState(0);

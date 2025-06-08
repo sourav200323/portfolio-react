@@ -29,3 +29,4 @@ export const colors = {
 // #4493f8, #665af0, #4493f8
 // #149CEA 
 // #665af0
+//  background: linear-gradient(to bottom, rgb(31, 41, 55), rgb(17, 24, 39));   (skill card er malta )

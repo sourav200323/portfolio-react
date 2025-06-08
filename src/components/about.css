@@ -213,15 +213,253 @@ a {
   text-decoration: none; /* Remove underline from links */
 }
 
+
+
+
+
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
-  .custom-button {
-    width: 180px; /* Adjust width for smaller screens */
-    height: 45px; /* Adjust height for smaller screens */
-  }
 
-  .button-container {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
-    gap: 20px; /* Increase space between stacked buttons */
-  }
+.profile-container {
+  /* max-width: 400px; */
+  margin: 0 auto;
+  padding: 20px 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
+.mobile-grid {
+    /* position: absolute; */
+    z-index: 0;
+    inset: 0;
+    height: 100%;
+    /* width: 100%; */
+    background-image: linear-gradient(to right, #3a33fe2b 1px, transparent 1px),
+      linear-gradient(to bottom, #1f57ff4c 1px, transparent 1px);
+    background-size: 100px 100px;
+    /* background-color: red; */
+  } 
+
+/* Top-left greeting */
+.greeting {
+  position: absolute;
+  top: -40px;
+  left: 26px;
+  font-size: 7rem;
+  font-weight: 700;
+  color: #aaaaaa67;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Image styling */
+.profile-image-wrapper {
+  /* margin-top: 60px; */
+  width: 250px;
+  height: 400px;
+  /* border-radius: 50%; */
+  /* overflow: hidden; */
+  object-fit:contain;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* Name */
+.name {
+  margin-top: 10px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #665af0;
+  color: #4493f8;
+}
+
+/* Intro paragraph */
+.intro {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+
+    background: linear-gradient(90deg, #4493f8, #665af0, #4493f8);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+    animation: gradient-shift11 1.5s linear infinite;
+
+  line-height: 1.4;
+  font-weight: 900;
+  max-width: 320px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@keyframes gradient-shift11 {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+} 
+
+  .desc{
+    color: #aaa;
+    margin: 0 auto;
+    text-align: center;
+    font-size: small;
+    font-family:fantasy;
+  }
+  .intro-img{
+    margin-top: 1rem;
+  }
+.intro-name{
+  display: flex;
+  align-items: center;
+}
+
+.mobile-about-btn-grp{
+  display: flex;
+  gap: 1.5rem;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin: 1rem 0 ;
+}
+.mobile-about-button {
+  cursor: pointer;
+  font-size: .85rem;
+  border-radius: 16px;
+  border: none;
+  padding: 2px;
+  background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
+  position: relative;
+}
+
+.mobile-about-button::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 60%;
+  border-radius: 120px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 20px #ffffff38;
+  z-index: -1;
+}
+
+.mobile-about-blob1 {
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  border-radius: 16px;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #3fe9ff,
+    #0000ff80,
+    transparent
+  );
+  box-shadow: -10px 10px 30px #0051ff2d;
+}
+
+.mobile-about-inner {
+  padding: 8px 25px;
+  border-radius: 14px;
+  color: #fff;
+  z-index: 3;
+  position: relative;
+  background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+}
+
+.mobile-about-inner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #00e1ff1a,
+    #0000ff11,
+    transparent
+  );
+  position: absolute;
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.gmail-Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.gmail-svgContainer {
+ width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: transparent; */
+  backdrop-filter: blur(20px);
+  background-color: #0000ff11;
+  background-color: rgba(156, 156, 156, 0.466);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.gmail-BG2 {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  /* subtle Gmail-style red gradient: from lighter to deeper red */
+  background: linear-gradient(135deg, #ea4335 0%, #d93025 100%);
+
+  z-index: -1;
+  border-radius: 9px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+
+.gmail-Btn:hover .gmail-BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.gmail-Btn:hover .gmail-svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+}
+
+}
+
+
+
+
+@media (max-width: 350px) {
+  .name {
+    font-size: 1.3rem;
+  }
+  .intro {
+    font-size: 0.9rem;
+  }
+  .desc{
+    color: #aaa;
+  }
+  .profile-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+} 

@@ -194,16 +194,17 @@ function Skills() {
 
     <div className='inside-stats-container'></div>
       
- <Threecard title = {'Problem Solving & DSA'} liItem1 ={'Proficient in implementing arrays, linked lists, stacks, queues'} liItem2 = {'Strong foundation in sorting and searching algorithms'} liItem3 = {'Familiar with recursion, greedy algorithms, and divide-and-conquer'}  subCode = {'dsa'} iconSource = {'https://i.ibb.co/qM8JV8cp/idea-1.png'} />
+      <Threecard title = {'Problem Solving & DSA'} liItem1 ={'Proficient in implementing arrays, linked lists, stacks, queues'} liItem2 = {'Strong foundation in sorting and searching algorithms'} liItem3 = {'Familiar with recursion, greedy algorithms, and divide-and-conquer'}  subCode = {'dsa'} iconSource = {'https://i.ibb.co/qM8JV8cp/idea-1.png'} />
 
- <Threecard title = {'Computer Networks'} liItem1 ={'OSI and TCP/IP models'} liItem2 = {'IP addressing, subnetting, and routing'} liItem3 = {'configuration of routers and switches'}  subCode = {'cn'} iconSource = {'https://i.ibb.co/39FcVNpX/network-switch.png'} />
+      <Threecard title = {'Computer Networks'} liItem1 ={'OSI and TCP/IP models'} liItem2 = {'IP addressing, subnetting, and routing'} liItem3 = {'configuration of routers and switches'}  subCode = {'cn'} iconSource = {'https://i.ibb.co/39FcVNpX/network-switch.png'} />
 
- <Threecard title = {'Database Management'} liItem1 ={'SQL queries for data retrieval and manipulation'} liItem2 = {'Worked with relational databases like MySQL'} liItem3 = {'Deploy and serve web applications using Apache'}  subCode = {'sql'} iconSource = {'https://i.ibb.co/M58bqL3Y/sql-2.png'} />
+      <Threecard title = {'Database Management'} liItem1 ={'SQL queries for data retrieval and manipulation'} liItem2 = {'Worked with relational databases like MySQL'} liItem3 = {'Deploy and serve web applications using Apache'}  subCode = {'sql'} iconSource = {'https://i.ibb.co/M58bqL3Y/sql-2.png'} />
 
- <Threecard title = {'Cloud Computing'} liItem1 ={'Familier with cloud platforms like AWS'} liItem2 = {'Deploy web applications on AWS EC2'} liItem3 = {'Utilize S3 for media storage'}  subCode = {'cc'} iconSource = {'https://i.ibb.co/qL5DFDZ3/cloud-server.png'} />
+      <Threecard title = {'Cloud Computing'} liItem1 ={'Familier with cloud platforms like AWS'} liItem2 = {'Deploy web applications on AWS EC2'} liItem3 = {'Utilize S3 for media storage'}  subCode = {'cc'} iconSource = {'https://i.ibb.co/qL5DFDZ3/cloud-server.png'} />
 
- <Threecard title = {'Operating System'} liItem1 ={'OS fundamentals: processes, threads, memory management'} liItem2 = {'Understanding of file systems, I/O operations, and system calls'} liItem3 = {'Knowledge of scheduling algorithms and deadlock concepts'}  subCode = {'os'} iconSource = {'https://i.ibb.co/rR353GkW/operating-system.png'} />
- <Threecard title = {'Object Oriented Programming (OOPS)'} liItem1 ={'Wrote clean, reusable code using encapsulation and inheritance'} liItem2 = {'Simplified complexity through abstraction.'} liItem3 = {'Built flexible systems with polymorphism.'}  subCode = {'oops'} iconSource = {'https://i.ibb.co/HT5BptfG/oops.png'} />
+      <Threecard title = {'Operating System'} liItem1 ={'OS fundamentals: processes, threads, memory management'} liItem2 = {'Understanding of file systems, I/O operations, and system calls'} liItem3 = {'Knowledge of scheduling algorithms and deadlock concepts'}  subCode = {'os'} iconSource = {'https://i.ibb.co/rR353GkW/operating-system.png'} />
+      
+      <Threecard title = {'Object Oriented Programming (OOPS)'} liItem1 ={'Wrote clean, reusable code using encapsulation and inheritance'} liItem2 = {'Simplified complexity through abstraction.'} liItem3 = {'Built flexible systems with polymorphism.'}  subCode = {'oops'} iconSource = {'https://i.ibb.co/HT5BptfG/oops.png'} />
 
    
         

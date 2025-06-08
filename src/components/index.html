@@ -1,0 +1,130 @@
+<div class="profile-container">
+  <div class="greeting">Hi there</div>
+  <div class="profile-image-wrapper">
+    <img src="https://i.ibb.co/9YQFc2M/Picsart-24-12-28-14-15-11-867.png" alt="Akash Bera" class="profile-image" />
+  </div>
+  <h1 class="name">I'm Akash Bera</h1>
+  <p class="intro">
+    Passionate developer focused on building great web experiences.<br />
+    Specializing in React and UI/UX design.
+  </p>
+  <div class="button-row">
+    <button class="btn primary">Contact Me</button>
+    <button class="btn secondary">Portfolio</button>
+  </div>
+</div>
+<style>
+  /* Container to center content and add some padding */
+  body{
+    background-color: rgb(26, 28, 45);
+  }
+.profile-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Top-left greeting */
+.greeting {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Image styling */
+.profile-image-wrapper {
+  margin-top: 60px; /* pushes image below greeting */
+  width: 340px;
+  height: 540px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  /* display: block; */
+}
+
+/* Name */
+.name {
+  margin-top: 16px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Intro paragraph */
+.intro {
+  margin-top: 8px;
+  font-size: 1rem;
+  text-align: center;
+  color: #555;
+  line-height: 1.4;
+  max-width: 320px;
+}
+
+/* Button row */
+.button-row {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Buttons */
+.btn {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #4493f8;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #3573d8;
+}
+
+.btn.secondary {
+  background-color: #eee;
+  color: #333;
+}
+
+.btn.secondary:hover {
+  background-color: #ddd;
+}
+
+/* Responsive text scaling */
+@media (max-width: 350px) {
+  .name {
+    font-size: 1.3rem;
+  }
+  .intro {
+    font-size: 0.9rem;
+  }
+  .profile-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+</style>

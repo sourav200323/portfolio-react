@@ -8,21 +8,15 @@
   background-color: transparent;
 }
 
-.experience-container h2 {
+/* .experience-container h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bolder;
   color: #333;
   margin-bottom: 30px;
   font-family: 'Lexend Giga', sans-serif;
-  /* text-shadow: 
-  1px 1px 0px rgba(255, 255, 255, 0.7), 
-  -1px -1px 0px rgba(0, 0, 0, 0.4),
-  1px -1px 0px rgba(0, 0, 0, 0.3),
-  -1px 1px 0px rgba(255, 255, 255, 0.3); */
 
-
-}
+} */
 
 .experience-list {
   margin-top: 20px;

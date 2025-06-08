@@ -104,10 +104,12 @@
 .os.three-card-icon{
   background-color: #bfdef3;
 }
+.oops.three-card-icon{
+  background-color: #92ffc5;
+}
 
 .content {
    color:  #4FC3F7;
-   /* color:  #665af0; */
   font-weight: 600;
   font-size: 16px;
 }
@@ -255,6 +257,9 @@
 .os.circle {
   background-color: #bfdef33a;
 }
+.oops.circle {
+  background-color: #92ffc544;
+}
 
 .logo .circle5 {
   width: 80px;
@@ -271,7 +276,6 @@
 }
 
 .logo .circle5 .svg {
-  /* width: 20px; */
   fill: white;
 }
 
@@ -303,3 +307,60 @@
 
 
 
+  @media (max-width: 640px) { /* sm:px-0 */
+    .parent {
+        min-width: 280px;
+        max-width: 320px;
+        height: 200px;
+    }
+    .three-card-icon {
+        width: 1px;
+        height: 1px;
+        color: #fff;
+        padding: 3px;
+        border-radius: 50%;
+        font-size: 20px;
+        margin-right: .5rem;
+    }
+    .sub-skill-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      color: #f0f0f0;
+      font-size: 12px ;
+      /* font-size:  0.75rem ; */
+    }
+    .logo .circle5 {
+      /* width: 10px;
+      height: 50px; */
+      transform: translate3d(0, 0, 100px);
+      top: 10px;
+      right: 10px;
+      display: grid;
+      place-content: center;
+      transition-delay: 1.6s;
+    }
+    .title1 {
+      text-align: left;
+      /* margin-top: -100rem; */
+    }
+
+  
+    .sub-skill-list li {
+      position: relative;
+      padding-left: 5px;
+      margin-bottom: 10px;
+      color: #f0f0f0;
+      font-size: 9.5px ;
+    }
+    .sub-skill-list li::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      background-color: #4FC3F7;
+      border-radius: 50%;
+    }
+  }

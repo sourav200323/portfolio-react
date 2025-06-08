@@ -145,16 +145,50 @@
 .navbar-logo h1 {
     color: #665af0  ;
     margin-right: 2.5rem;
+    text-shadow: 2px 2px 0 #0f1111;
 }
 .navbar-logo img {
     width: 2.5rem;
 }
+@media (max-width: 768px) {
+    .navbar-logo {
+        width: 20vw;
+        display: flex;
+        align-items: center;
+        /* justify-content: flex-start; */
+        justify-content: center;
+        gap: 10px;
+        margin: 1% 1.5%;
+        /* flex: 0 0 13%; */
+        backdrop-filter: blur(8px);
+        background-color: #7a7a7a58;
+        background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+        border: 1px solid #4493f8 ;
+        border-radius: 1.2rem;
+        height: 2.5rem;
+    } 
+    .navbar-logo h1 {
+    /* position: relative;
+    left: -20px; */
+    color: #665af0  ;
+    margin-right: 2rem;
+    text-shadow: 2px 2px 0 #0f1111;
+    font-size: 1.4rem;
+    }
+    .navbar-logo img {
+        width: 2.5rem;    
+        /* position: relative; */
+        /* left: -10px; */
+    }
+}
+
 .linkedin-and-theme-button{
     max-width: 10%;
     display: flex;
     justify-content: space-around; /* Align list items to the right */
     align-items: center;
     /* background-color: red; */
+    margin-right: 1.5rem;
     flex: 0 0 20%; 
 }
 .download-resume{
@@ -218,7 +252,7 @@ abbr {
     width: 24px; /* Icon size */
     height: 24px; 
     fill: currentColor; /* Use current color for SVG */
-    margin-left: -2rem; /* Space between text and icon */
+    margin-right: 2rem; /* Space between text and icon */
     transition: .3s all ease-in-out;
     &:hover{
         transform: scale(1.1);
@@ -364,4 +398,93 @@ abbr {
 }
 
 
+/* Shift container left slightly */
+.dropdown-container {
+  position: relative;
+  right: 1.5rem;
+  display: inline-block;
+  margin-left: 0px; /* adjust as needed */
+  
+}
 
+/* Adjust dropdown positioning */
+.dropdown-content {
+  position: absolute;
+  left: -10rem; /* aligns it directly with the button's left edge */
+  transform: translateX(-8px); /* shift it slightly to the left */
+  min-width: 200px;
+  border-radius: 8px;
+  z-index: 1000;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-out;
+  margin-top: 8px;
+  border: 1px solid transparent;
+}
+
+.dropdown-content.link-dark{
+    background:linear-gradient(to bottom, rgb(31, 41, 55), rgb(17, 24, 39));
+} 
+.dropdown-content.link-light{
+    background:linear-gradient(to bottom, rgb(220, 220, 220), rgb(183, 196, 222));
+    color: black
+} 
+.dropdown-btn {
+  /* background: linear-gradient(135deg, #4FC3F7, #665af0); */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
+  transition: all 0.5s ease;
+}
+.dropdown-btn.link-dark{
+    background-color: transparent;
+    fill: white;
+}
+.dropdown-btn.link-light{
+    background-color: transparent;
+    /* fill: white; */
+}
+.dropdown-btn:hover{
+    transform: scale(1.1)
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.text-download{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+    /* background-color: red; */
+}
+.text-download.link-light{
+    color: black;
+}
+.dropdown-content a {
+  color: #f0f0f0;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-content a:hover {
+  background: rgba(55, 65, 81, 0.7);
+  padding-left: 20px;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
