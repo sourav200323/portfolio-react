@@ -63,18 +63,22 @@
 }
 
 /* Dark Mode */
-.navbar-dark .hobbies-container h2 {
-  color: #f0f6fc;
+.navbar-dark .hobbies-container h3{
+  color: #18232ec2;
 }
 
 .navbar-dark .hobby-card {
-  background: rgba(13, 17, 23, 0.9);
+  /* background: rgba(13, 17, 23, 0.9); */
+  
+  background: linear-gradient(135deg, #171723, #1e1e2f);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  color: #f0f6fc;
+  color: #f0f6fcc4;
+} 
+.navbar-dark .hobi-h3{
+  color: rgb(221, 221, 221);
 }
-
 .navbar-dark .hobby-card p {
-  color: #e0e0e0;
+  color: #e0e0e087;
 }
 
 /* Responsive Design */

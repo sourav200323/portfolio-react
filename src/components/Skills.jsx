@@ -121,7 +121,11 @@ function Skills() {
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M33.563 22.611L31.341 28.5l-2.223-5.889M20.9 26.278a2.23 2.23 0 0 1-2.223 2.222h0a2.23 2.23 0 0 1-2.222-2.222v-1.445a2.23 2.23 0 0 1 2.222-2.222h0a2.23 2.23 0 0 1 2.223 2.222m0 3.667v-5.889m6.63 5.889v-3.667a2.23 2.23 0 0 0-2.222-2.222h0a2.23 2.23 0 0 0-2.222 2.222V28.5m0-3.667v-2.222m-8.67 2.889a2.99 2.99 0 0 1-3 3h0a2.99 2.99 0 0 1-3-3v-3a2.99 2.99 0 0 1 3-3h0a2.895 2.895 0 0 1 2.89 3h0m25.278 3.778A2.23 2.23 0 0 1 37.36 28.5h0a2.23 2.23 0 0 1-2.222-2.222v-1.445a2.23 2.23 0 0 1 2.222-2.222h0a2.23 2.23 0 0 1 2.223 2.222m.001 3.667v-5.889" stroke-width="1"/><circle cx="24" cy="24" r="21.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></svg>
     )
   return (
+    <>
+    
+<div className="skills-bg-grid"></div> 
     <div className="skills-container">
+      
         <h2>Skills </h2>
         
   <div className="header-badge"><p className='animated-gradient-text'>Primary Technical Domains</p></div>
@@ -196,11 +200,11 @@ function Skills() {
       
       <Threecard title = {'Problem Solving & DSA'} liItem1 ={'Proficient in implementing arrays, linked lists, stacks, queues'} liItem2 = {'Strong foundation in sorting and searching algorithms'} liItem3 = {'Familiar with recursion, greedy algorithms, and divide-and-conquer'}  subCode = {'dsa'} iconSource = {'https://i.ibb.co/qM8JV8cp/idea-1.png'} />
 
-      <Threecard title = {'Computer Networks'} liItem1 ={'OSI and TCP/IP models'} liItem2 = {'IP addressing, subnetting, and routing'} liItem3 = {'configuration of routers and switches'}  subCode = {'cn'} iconSource = {'https://i.ibb.co/39FcVNpX/network-switch.png'} />
+      <Threecard title = {'Computer Networks'} liItem1 ={'Understanding of OSI and TCP/IP networking models'} liItem2 = {'Proficient in IP addressing, subnetting, and routing techniques'} liItem3 = {'Experience in configuration and management of routers and switches'}  subCode = {'cn'} iconSource = {'https://i.ibb.co/39FcVNpX/network-switch.png'} />
 
       <Threecard title = {'Database Management'} liItem1 ={'SQL queries for data retrieval and manipulation'} liItem2 = {'Worked with relational databases like MySQL'} liItem3 = {'Deploy and serve web applications using Apache'}  subCode = {'sql'} iconSource = {'https://i.ibb.co/M58bqL3Y/sql-2.png'} />
 
-      <Threecard title = {'Cloud Computing'} liItem1 ={'Familier with cloud platforms like AWS'} liItem2 = {'Deploy web applications on AWS EC2'} liItem3 = {'Utilize S3 for media storage'}  subCode = {'cc'} iconSource = {'https://i.ibb.co/qL5DFDZ3/cloud-server.png'} />
+      <Threecard title = {'Cloud Computing'} liItem1 ={'Familiar with major cloud platforms like AWS'} liItem2 = {'Deploy and manage web applications on AWS EC2'} liItem3 = {'Utilize Amazon S3 for scalable media storage'}  subCode = {'cc'} iconSource = {'https://i.ibb.co/qL5DFDZ3/cloud-server.png'} />
 
       <Threecard title = {'Operating System'} liItem1 ={'OS fundamentals: processes, threads, memory management'} liItem2 = {'Understanding of file systems, I/O operations, and system calls'} liItem3 = {'Knowledge of scheduling algorithms and deadlock concepts'}  subCode = {'os'} iconSource = {'https://i.ibb.co/rR353GkW/operating-system.png'} />
       
@@ -215,6 +219,7 @@ function Skills() {
       {/* <Threecard/> */}
   
     </div>
+    </>
   )
 }
 

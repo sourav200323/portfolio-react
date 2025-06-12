@@ -24,7 +24,7 @@ const Hobbies = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: index * 0.1, duration: 0.2 }}
           >
-            <h3>{hobby.title}</h3>
+            <h3 className='hobi-h3'>{hobby.title}</h3>
             <p>{hobby.description}</p>
           </motion.div>
         ))}

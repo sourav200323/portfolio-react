@@ -74,6 +74,8 @@
     display: flex;
     /* gap: .3rem; */
     align-items: baseline;
+    margin-top:-.5rem ;
+    margin-bottom: .5rem;
     /* justify-content: center; */
     width: 90%;
 }
@@ -307,11 +309,14 @@
 
 
 
-  @media (max-width: 640px) { /* sm:px-0 */
+@media (max-width: 640px) { /* sm:px-0 */
     .parent {
         min-width: 280px;
         max-width: 320px;
         height: 200px;
+    }
+    .three-card-icon-header{
+      margin-top: -1rem;
     }
     .three-card-icon {
         width: 1px;

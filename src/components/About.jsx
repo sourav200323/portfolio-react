@@ -24,9 +24,20 @@ function About() {
           {/* <section class="about-section"> */}
             <div class="about-container">
               <div class="left-side">
-                <h1>Hi there, I'm Akash Bera</h1>
-                <p>I build things for web, frontend, backend, DSA...</p>
-                <p class="note">It would be great to connect with you!</p>
+                <div className="hi-there">
+                  Hi there
+                </div>
+                <div className="intro-name-desk">
+                  <div className="name-desk">I'm </div>
+                  <img className='intro-img-desk' height={'40px'} src="https://i.ibb.co/jmT4TwM/Akash-Bera-6-8-2025.png" alt="" />
+                </div>
+
+                 <div className="intro-desk">
+                  Full Stack Developer & Problem Solver
+                  </div>
+                  <div className="descrip-desk">
+                    Specializing in building responsive web applications with modern technologies
+                  </div>
 
                 <div className="button-container">
                 <a href="https://linkedin.com/in/akash-bera-5a3009250" target="_blank" rel="noopener noreferrer">
@@ -62,28 +73,13 @@ function About() {
                     </div>
                   </button>
                 </a>
-
-                <a href="mailto:akashbera102003@gmail.com" target="_blank" rel="noopener noreferrer">
-                  <button className="custom-button">
-                    <span class="background"></span>
-                    <div className={`button-content ${isDarkMode ? 'dark' :'light'}`}>
-                      <div class="text-container">
-                        <p class="button-text">
-                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="#4493f8"  class="icon icon-tabler icons-tabler-filled icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" /><path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" /></svg>
-                          Email
-                        </p>
-                      </div>
-                    </div>
-                  </button>
-                </a>
-
-                <a href="https://leetcode.com/u/AKASH_BERA/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://leetcode.com/u/AKASH_BERA/" target="_blank" rel="noopener noreferrer">
                   <button className="custom-button">
                     <span class="background"></span>
                         <div className={`button-content ${isDarkMode ? 'dark' :'light'}`}>
                       <div class="text-container">
                         <p class="button-text">
-                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#4493f8"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-leetcode"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13h7.5" /><path d="M9.424 7.268l4.999 -4.999" /><path d="M16.633 16.644l-2.402 2.415a3.189 3.189 0 0 1 -4.524 0l-3.77 -3.787a3.223 3.223 0 0 1 0 -4.544l3.77 -3.787a3.189 3.189 0 0 1 4.524 0l2.302 2.313" /></svg>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="128" height="25" viewBox="0 0 128 128"><path fill="#4493f8" d="M76.992.002C75.171-.035 73.362.627 72 1.998l-53.432 53.87c-5.19 5.237-7.904 12.464-7.904 20.454s2.715 15.447 7.904 20.674l23.004 23.26c5.19 5.221 12.363 7.744 20.283 7.744s15.095-2.731 20.295-7.969l13.803-14.064c2.72-2.742 2.625-7.281-.207-10.135s-7.334-2.948-10.049-.207l-14.273 13.904c-2.464 2.491-5.878 3.532-9.649 3.532s-7.18-1.04-9.654-3.532L29.197 86.26c-2.47-2.49-3.71-6.134-3.71-9.937s1.24-7.237 3.71-9.728l22.856-23.362c2.47-2.49 5.953-3.439 9.718-3.439c3.766 0 7.18 1.038 9.649 3.53l14.271 13.9c2.72 2.746 7.223 2.65 10.055-.203c2.832-2.86 2.927-7.398.207-10.14L82.15 32.823c-3.461-3.445-7.845-5.952-12.757-7.093l-.182-.04l13.05-13.35c2.732-2.74 2.636-7.284-.197-10.138a7.36 7.36 0 0 0-5.072-2.2M56.937 69.379c-3.712 0-6.718 3.22-6.718 7.178s3.001 7.18 6.718 7.18h53.678c3.712.005 6.72-3.217 6.72-7.18c0-3.958-3.008-7.178-6.72-7.178z"/></svg>
                           Leetcode 
                         </p>
                       </div>
@@ -91,18 +87,46 @@ function About() {
                   </button>
                 </a>
 
+                <a href="mailto:akashbera102003@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <button className="gmail-Btn about-blob2">
+                    <span class="gmail-svgContainer"> <svg  xmlns="http://www.w3.org/2000/svg"  width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg></span>
+                    {/* <div className={`button-content ${isDarkMode ? 'dark' :'light'}`}> */}
+                       <span class="gmail-BG"></span>
+                  </button>
+                </a>
+
+
+
                 </div>
 
               </div>
               <div class="right-side">
-                <img src="https://i.ibb.co/9YQFc2M/Picsart-24-12-28-14-15-11-867.png" alt="Akash Bera" class="profile-image" loading='eager' />
+                <img src="https://i.ibb.co/9YQFc2M/Picsart-24-12-28-14-15-11-867.png" alt="Akash Bera" className="profile-image" loading='eager' />
               </div>
             </div>
           {/* </section> */}
     </div>
   )
 
-const MobileVersion = ({ isDarkMode }) => (
+const MobileVersion = ({ isDarkMode }) => {
+  const [animateGreeting, setAnimateGreeting] = useState(false);
+   const [showIntroName, setShowIntroName] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAnimateGreeting(true);
+    }, 300); // Delay to allow image or layout to load a bit
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIntroName(true);
+    }, 500); // delay to make it look polished after greeting
+    return () => clearTimeout(timer);
+  }, []);
+
+  return(
   <div className="profile-container mobile-grid">
     <div className="greeting">Hi there</div>
     
@@ -115,10 +139,17 @@ const MobileVersion = ({ isDarkMode }) => (
     </div>
     
 
-    <div className="intro-name">
-       <h1 className="name">I'm </h1>
-       <img className='intro-img' height={'40px'} src="./public/mine-image/Akash-Bera-6-8-2025.png" alt="" />
-    </div>
+  <div className="intro-name">
+    <h1 className="name">I'm </h1>
+    <img
+      className="intro-img"
+      height="40px"
+      src="https://i.ibb.co/jmT4TwM/Akash-Bera-6-8-2025.png"
+      alt="Akash Bera"
+    />
+  </div>
+
+
     
     <p className="intro">
      Full Stack Developer & Problem Solver
@@ -132,7 +163,7 @@ const MobileVersion = ({ isDarkMode }) => (
           <a href="https://linkedin.com/in/akash-bera-5a3009250" target="_blank" rel="noopener noreferrer">
       <button class="mobile-about-button">
         <div class="mobile-about-blob1"></div>
-        <div class="mobile-about-inner">                          <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="#4493f8"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" /></svg>
+        <div class="mobile-about-inner"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="#4493f8"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" /></svg>
                           <p>
                           LinkedIn</p></div>
       </button></a>
@@ -158,9 +189,42 @@ const MobileVersion = ({ isDarkMode }) => (
       </button></a>
 
   </div>
+
+  
+<div className="mobile-about-btn-grp1">
+  <a
+    href="https://drive.google.com/file/d/1EZizpa3drJaEfgDvpqUNJt_oJ49KowZI/view?usp=drive_link"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button className="Download-button">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="icon icon-tabler icons-tabler-outline icon-tabler-file-text"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+        <path d="M9 9l1 0" />
+        <path d="M9 13l6 0" />
+        <path d="M9 17l6 0" />
+      </svg>
+      View Resume
+    </button>
+  </a>
 </div>
-  // </div>
-);
+
+</div>
+  );
+};
 
 
 

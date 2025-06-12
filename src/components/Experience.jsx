@@ -18,12 +18,12 @@ function Experience  () {
       duration: 'June 2024 - Aug 2024',
       description: 'Developed user interfaces and improved website functionality, enhancing user experience'
     },
-    {
-      title: 'Acehack 3.0',
-      company: '36-hour Inter-College Hackathon',
-      duration: 'Feb 2024 - April 2024',
-      description: ' Participated with team, demonstrating problem-solving skills under tight deadlines.'
-    },
+    // {
+    //   title: 'Acehack 3.0',
+    //   company: '36-hour Inter-College Hackathon',
+    //   duration: 'Feb 2024 - April 2024',
+    //   description: ' Participated with team, demonstrating problem-solving skills under tight deadlines.'
+    // },
   ];
   return (
     <div className="experience-container">

@@ -117,7 +117,7 @@ function Projects() {
     <>
     <h2>Projects</h2>
 <div className="projects-section">
-  <div className="alter-prjct-container">
+ <div className={`alter-prjct-container ${isExpanded ? 'expanded' : ''}`}>
  {visibleProjects.map((proj, index) => (
 <div className="modern-prjt-card">
   <div className="modern-prjt-top-section">

@@ -7,6 +7,7 @@
     inset: 0;
     height: 100%;
     width: 100%;
+    border-radius: 1rem;
     background-image: linear-gradient(to right, #3a33fe2b 1px, transparent 1px),
       linear-gradient(to bottom, #1f57ff4c 1px, transparent 1px);
     background-size: 100px 100px;
@@ -34,6 +35,8 @@
   }
   
   .left-side {
+    position: relative;
+    top: 1.5rem;
     margin-left: 10%;
     flex:1.3;
     padding-right: 30px;
@@ -77,7 +80,7 @@
   .right-side {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     /* background-color: #3366cc; */
   }
@@ -85,11 +88,13 @@
   .profile-image {
     max-width: 100%;
     height: auto;
-    border-radius: 30%;
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
     object-fit: cover;
     width: 250px; /* Adjust this for a nice balanced image size */
     filter: brightness(95%);
+    margin-left: 1rem;
+    /* gap: 1rem; */
+    
+  /* box-shadow: -10px 10px 30px #0051ff69; */
   }
   
   @media (max-width: 768px) {
@@ -134,6 +139,8 @@
   padding: 0;
  /*  overflow: hidden; Hide overflow for the rounded corners */
   transition: transform 0.3s ease-in-out;
+  
+  box-shadow: -10px 10px 30px #0051ff69;
 }
 
 /* Background effect */
@@ -213,6 +220,126 @@ a {
   text-decoration: none; /* Remove underline from links */
 }
 
+.hi-there{
+  color: rgba(255, 255, 255, 0.592);
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+    animation: greetingFadeIn 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+@keyframes greetingFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-0px, -50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.gmail-Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.gmail-svgContainer {
+ width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: transparent; */
+
+  backdrop-filter: blur(20px);
+  background-color: #0000ff11;
+  background-color: rgba(156, 156, 156, 0.466);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+.gmail-svgContainer:hover{
+    transform: scale(1.1);
+}
+
+.gmail-svgContainer svg{
+  position: relative;
+    /* top: 10%; */
+}
+.about-blob2 {
+  /* position: absolute; */
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle 70px at 0% 100%,
+    #3fe9ff,
+    #0000ff80,
+    transparent
+  );
+  box-shadow: -10px 10px 30px #0051ff69;
+}
+.intro-name-desk{
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.name-desk{
+  font-size: 2rem;
+  color: #4493f8;
+  /* background-color: red; */
+}
+.intro-img-desk{
+  position: relative;
+  /* z-index: inherit; */
+  height: 4rem;
+}
+
+.intro-desk {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+    background: linear-gradient(90deg, #4493f8, #665af0, #4493f8);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+    animation: gradient-shift11 1.5s linear infinite;
+  line-height: 1.4;
+  font-weight: 900;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@keyframes gradient-shift11 {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+} 
+
+  .descrip-desk{
+    color: #aaa;
+  position: relative;
+    text-align: center;
+    font-family:cursive;
+    width: 100%;
+  }
+
 
 
 
@@ -220,7 +347,9 @@ a {
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
-
+.profile-image {
+  margin-left: 0;
+}
 .profile-container {
   /* max-width: 400px; */
   margin: 0 auto;
@@ -253,8 +382,21 @@ a {
   font-weight: 700;
   color: #aaaaaa67;
   font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+  transform: translate(-50px, -50px);
+  animation: greetingFadeIn 1.2s ease-out forwards;
+  animation-delay: 0.3s;
 }
-
+@keyframes greetingFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, -50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
 /* Image styling */
 .profile-image-wrapper {
   /* margin-top: 60px; */
@@ -292,12 +434,69 @@ a {
   background-clip: text;
   color: transparent;
     animation: gradient-shift11 1.5s linear infinite;
+    transition: all 1s ease-out;
 
   line-height: 1.4;
   font-weight: 900;
   max-width: 320px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+/* Container */
+.intro-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Text: “I’m” */
+.name {
+  font-size: 2rem;
+  font-weight: 700;
+  /* color: #ffffff; */
+  animation: slideFadeLeft 1s ease-in-out ;
+}
+
+/* Image animation */
+.intro-img {
+  height: 4rem;
+  margin-bottom: -0.5rem;
+  margin-top: -0.5rem;
+  animation: slideFadeRight 3s ease-in-out ;
+}
+
+/* Animations */
+@keyframes slideFadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  /* 100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  } */
+}
+
+@keyframes slideFadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  /* 100% {
+    opacity: 0;
+    transform: translateX(20px);
+  } */
+}
+
 @keyframes gradient-shift11 {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -312,6 +511,9 @@ a {
   }
   .intro-img{
     margin-top: 1rem;
+    height: 4rem;
+    margin-bottom: -.5rem;
+    margin-top: -.5rem;
   }
 .intro-name{
   display: flex;
@@ -325,6 +527,75 @@ a {
   align-items: center;
   margin: 1rem 0 ;
 }
+.Download-button {
+  width: 75vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 12px 20px;
+  color: #ffffffd2;
+  background: linear-gradient(135deg, #1f2937, #111827); /* dark bg */
+  border: 1px solid #4493f8;
+  box-shadow: 0 0.7em 1.5em -0.5em rgba(68, 147, 248, 0.25);
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.Download-button svg {
+  margin-right: 8px;
+  width: 25px;
+  stroke: #149CEA;
+  stroke-width: 2;
+}
+
+.Download-button:hover {
+  background: linear-gradient(135deg, #111827, #1f2937); /* subtle reverse */
+  box-shadow: 0 0.5em 1.5em -0.3em rgba(100, 149, 237, 0.35); /* bluish glow */
+  transform: scale(1.03);
+}
+
+.Download-button:active {
+  box-shadow: 0 0.3em 1em -0.3em rgba(100, 149, 237, 0.3);
+  transform: scale(0.98);
+}
+
+.Download-button::before,
+.Download-button::after {
+  content: "";
+  width: 4px;
+  height: 40%;
+  background-color: #149CEA;
+  position: absolute;
+  border-radius: 5px;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.Download-button::before {
+  left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.Download-button::after {
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.Download-button:hover::before,
+.Download-button:hover::after {
+  height: 60%;
+  opacity: 1;
+}
+
+
 .mobile-about-button {
   cursor: pointer;
   font-size: .85rem;

@@ -10,13 +10,10 @@
 
 .social-contact{
   max-width : 40vw  ;
-  /* min-width : 20vw  ; */
-  /* background-color: red; */
   margin: 0 auto;
 }
 
 .terminal-container {
-  /* display: flex; */
   min-width:50vw ;
   justify-content: center;
   align-items: center;
@@ -81,6 +78,7 @@
   font-weight: 500;
   padding: 10px 0 20px 15px;
   word-spacing: 5px;
+  
 }
 
 .terminal-greeting {
@@ -150,10 +148,7 @@ margin: .3rem ;
   width: 70%; 
 }
 .next-input {
-  /* display: flex; Use flexbox for horizontal alignment */
-  /* align-items: center;  */
   color: #ececec99;
-  /* background-color: red; */
 }
 .terminal-propmt{
   margin-right: 5px; 
@@ -197,6 +192,8 @@ margin: .3rem ;
   flex-direction: column;
   gap: 1em;
   background-color:transparent;
+  margin-bottom: 2rem  ;
+
 }
 
 .card-container {
@@ -345,20 +342,6 @@ margin: .3rem ;
 .card-footer {
   padding-inline: 1em;
 }
-
-/* @keyframes backglitch {
-  0% {
-    box-shadow: inset 0px 20px 30px 40px rgb(17, 24, 39);
-  }
-
-  50% {
-    box-shadow: inset 0px -20px 30px 40px rgba(79, 70, 229, 0.5);
-  }
-
-  to {
-    box-shadow: inset 0px 20px 30px 40px rgb(17, 24, 39);
-  }
-} */
 
 @keyframes rotate {
   0% {

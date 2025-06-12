@@ -173,6 +173,7 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
   position: relative;
   overflow: hidden;
+   box-shadow: -5px 10px 30px #0051ff69;
 }
 
 /* Gradient Border Overlay */
@@ -228,7 +229,7 @@
 }
 
 .light .tech-tag {
-  background: #f0f0f0;
+  background: #665af0;;
   color: #000000;
   padding: 6px 12px;
   border-radius: 12px;
@@ -237,7 +238,7 @@
 }
 
 .light .tech-tag:hover {
-  background: #665af0;
+  /* background: #665af0; */
   color: #ffffff;
 }
 
@@ -277,7 +278,7 @@
 }
 
 .dark .tech-tag {
-  background: #212830;
+  background: #665af0;;
   color: #f0f6fc;
   padding: 6px 12px;
   border-radius: 12px;
@@ -302,19 +303,29 @@
 .hackathon-date {
   font-size: 0.95rem;
   margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .hackathon-role {
    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: .85rem;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 12px;
+  background: rgba(35, 46, 62, 0.8);
+  padding: 2px 10px ;
+  /* width: 60%; */
+  display: inline-block;
+  text-align: center;
+  border-radius: .5rem;
+  color: #149CEA;
 }
 
 .hackathon-achievements {
   font-size: .8rem;
   line-height: 1.6;
   margin-bottom: 16px;
+  /* opacity: .8; */
+  color: #afb4bb;
 }
 
 .hackathon-tech {

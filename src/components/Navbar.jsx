@@ -23,7 +23,14 @@
                 }, []);
 
                 const resumeLink = 'https://drive.google.com/file/d/1EZizpa3drJaEfgDvpqUNJt_oJ49KowZI/view?usp=drive_link';
-
+                  const handleDownload = () => {
+                    const link = document.createElement('a');
+                    link.href = resumeLink;
+                    link.setAttribute('download', 'Resume.pdf'); // Custom filename
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                };
 
         useEffect(() => {
             const sections = document.querySelectorAll('section');
@@ -58,7 +65,7 @@
         return (
             <nav className={`navbar `}>
                 <div className={`back-nav ${isDarkMode ? 'back-nav-dark' : 'back-nav-light'}`}/>
-                <a href = "" className="navbar-logo">
+                <a href = "" className={`navbar-logo`}>
                     <img src="https://avatars.githubusercontent.com/u/146749055?v=4" alt="Logo" className="logo" />
                     <h1>Akash Bera</h1>
                 </a>
@@ -120,6 +127,7 @@
                     rel="noopener noreferrer"
                     id="download-resume"
                     className=''
+                    onClick={handleDownload}
                 >
                     <p className={` text-download ${isDarkMode ? 'link-dark' : 'link-light'}`}>
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-download"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></svg>

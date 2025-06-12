@@ -1,315 +1,53 @@
-.achievement-main-container{
-    /* background-color: black; */
-    min-height: 100vh;
-}
-
-
-/* CodePen Card, themed & namespaced */
-/* InteractiveCard.css */
-
-/* Card container */
-.achievement-card-main {
-  display: inline-block;
+/* Achievement Container */
+.achievement-main-container {
+  min-height: 100vh;
   position: relative;
-  font-family: sans-serif;
+  padding: 2rem 0;
 }
 
-/* The card face */
-.achievement-card-card {
-  width: 15em;
-  height: 10em;
-  background: linear-gradient(
-    270deg,
-    #4493f8,
-    rgb(99, 102, 241),
-    #665af0,
-    #149cea,
-    rgba(79, 70, 229, 0.5),
-    rgb(17, 24, 39)
-  );
-  background-size: 800% 800%;
-  animation: AnimationName 3s ease infinite;
-  transition: transform .4s ease-in-out;
-  border-radius: 7px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
+.skills-bg-grid {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    background-image: linear-gradient(to right, #3a33fe2b 1px, transparent 1px),
+      linear-gradient(to bottom, #1f57ff4c 1px, transparent 1px);
+    background-size: 100px 100px;
 }
 
-/* Back overlay for 3D effect */
-.achievement-card-card_back {
-  position: absolute;
-  top: 0; left: 0;
-  width: 15em;
-  height: 10em;
-  /* background-color: rgba(17, 24, 39, 0.6); */
-  border-radius: 7px;
-  transform: translate(0.7em, -4.7em);
-  transition: transform .2s ease-in-out;
-  z-index: -1;
+.achievement-main-container.dark {
+  /* background-color: #121212; */
+  color: #e0e0e0;
 }
 
-/* When hovering the main container */
-.achievement-card-main:hover .achievement-card-card {
-  transform: translateY(-0.3em);
-}
-.achievement-card-main:hover .achievement-card-card_back {
-  transform: translate(0, -5.9em) scale(1.1);
+.achievement-main-container.light {
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-/* Fullscreen icon wrapper */
-.achievement-card-fl {
-  display: flex;
-  justify-content: flex-end;
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-}
-.achievement-card-main:hover .achievement-card-fl {
-  opacity: 1;
-}
-
-/* Fullscreen icon box */
-.achievement-card-fullscreen {
-  width: 1.5em;
-  height: 1.5em;
-  margin: 1em .5em 0 1em;
-  background-color: rgba(79, 70, 229, 0.5);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
-}
-.achievement-card-fl:hover .achievement-card-fullscreen {
-  transform: scale(1.2);
-}
-
-/* Fullscreen SVG */
-.achievement-card-fullscreen_svg {
-  width: 1em;
-  height: 1em;
-  fill: rgb(99, 102, 241);
-  transition: fill .2s ease-in-out;
-}
-.achievement-card-fl:hover .achievement-card-fullscreen_svg {
-  fill: #4493f8;
-}
-
-/* Data row under card */
-.achievement-card-data {
-  display: flex;
-  align-items: center;
-  margin-top: 1em;
-}
-
-/* Avatar box */
-.achievement-card-img {
-  width: 2.25em;
-  height: 2.25em;
-  background-color: rgb(17, 24, 39);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-/* Text details */
-.achievement-card-text {
-  margin-left: 0.5em;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: Montserrat, sans-serif;
-}
-.achievement-card-text_m {
-  font-weight: bold;
-  font-size: 0.9em;
-}
-.achievement-card-text_s {
-  font-size: 0.7em;
-}
-
-/* Buttons row */
-.achievement-card-btns {
-  display: flex;
-  gap: 0.5em;
-  margin-top: 0.5em;
-  opacity: 0;
-  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
-}
-.achievement-card-main:hover .achievement-card-btns {
-  opacity: 1;
-  transform: translateY(-0.5em);
-}
-
-/* Individual icon buttons */
-.achievement-card-likes,
-.achievement-card-comments,
-.achievement-card-views {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(17, 24, 39);
-  border-radius: 4px;
-  height: 1.4em;
-  transition: background-color .2s ease-in-out;
-}
-.achievement-card-likes { width: 2.5em; }
-.achievement-card-comments { width: 2.5em; }
-.achievement-card-views    { width: 3em;    }
-
-.achievement-card-likes_svg,
-.achievement-card-comments_svg,
-.achievement-card-views_svg {
-  width: 0.75em;
-  height: 0.75em;
-  fill: white;
-}
-.achievement-card-likes_text,
-.achievement-card-comments_text,
-.achievement-card-views_text {
-  margin-left: 0.25em;
-  font-size: 0.8em;
-  color: white;
-  font-family: Montserrat, sans-serif;
-}
-
-/* Hover on each icon */
-.achievement-card-likes:hover,
-.achievement-card-comments:hover,
-.achievement-card-views:hover {
-  background-color: #665af0;
-  cursor: pointer;
-}
-
-/* The “Code to Infinity!” button area */
-.achievement-card-card_content {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.5em;
-}
-
-/* The button itself */
-.achievement-card-card_content button {
-  padding: 0.8em;
-  width: 14em;
-  border-radius: 10px;
-  border: 1px solid #4493f8;
-  background: transparent;
-  color: #4493f8;
-  font-family: Montserrat, sans-serif;
-  font-weight: bold;
-  font-size: 0.8em;
-  position: relative;
-  transition: background .4s ease-in-out, color .4s ease-in-out, transform .2s ease-in-out;
-}
-.achievement-card-card_content button::before {
-  content: "∞";
-  position: absolute;
-  top: -0.36em;
-  left: 1.6em;
-  font-size: 3.5em;
-  opacity: 0;
-  transition: opacity .4s ease-in-out;
-}
-.achievement-card-card_content button::after {
-  content: "(Hold Me)";
-  position: absolute;
-  opacity: 0;
-  transition: opacity .4s ease-in-out;
-}
-
-/* Hover state */
-.achievement-card-card_content button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: black;
-  border-radius: 15px;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-  backdrop-filter: blur(5px);
-}
-.achievement-card-card_content button:hover::after {
-  opacity: 1;
-  font-size: 0.7em;
-}
-
-/* Active (held) state */
-@keyframes AnimationName {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-.achievement-card-card_content button:active {
-  transform: scale(1.1);
-  color: white;
-  background: linear-gradient(
-    90deg,
-    #4493f8,
-    rgb(99, 102, 241),
-    #665af0,
-    #149cea
-  );
-  background-size: 800% 800%;
-  animation: AnimationName 1s ease infinite;
-}
-.achievement-card-card_content button:active::before {
-  opacity: 1;
-}
-
-
-
-
-
-
- /* grid layout */
+/* Grid Layout */
 .outer-div {
   display: flex;
-  justify-content: center;   /* centers horizontally */
-  align-items: center;       /* centers vertically (optional) */
-  padding: 2rem; 
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
   margin: 4rem;
 }
-/* .dashboard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  grid-auto-rows: minmax(100px, auto);
-  gap: 16px;
-  padding: 20px;
-} */
 
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   width: 100%;
-  max-width: 1200px; /* control max size */
+  max-width: 1200px;
 }
-.achievement-dark{
-  background: linear-gradient(135deg, #2a2a3d, #1e1e2f);
-}
-.achievement-light{
-  background:rgb(209, 209, 209) ; 
-  color: #1e1e2f;
-}
-.achievement-dark-title{
-  color: #e0e0e0;;
-}
-.achievement-light-title{
-  color: #252525;;
-}
-.achievement-dark-sub{
-  color: #e0e0e0;
-   color: #a0a0b0; 
-}
-.achievement-light-sub{
-  color: #000000;
-  color:  #4493f8; 
-}
+
+/* Card Styles */
 .dashboard-item {
-  /* background: linear-gradient(135deg, #2a2a3d, #1e1e2f); */
-    box-shadow:
-    inset 4px 4px 8px rgba(0, 0, 0, 0.7),    /* dark inset at bottom-right */
-    inset -4px -4px 8px rgba(255, 255, 255, 0.05); /* subtle light inset at top-left */
-  color: #e0e0e0;
-  border-radius: 16px;
+  position: relative;
+  /* border-radius: 16px; */
   padding: 24px 20px;
   display: flex;
   flex-direction: column;
@@ -318,60 +56,202 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.dashboard-item.tall {
-  grid-column: span 2;
-  grid-row: span 2;  /* Makes it taller */
-}
-
-.dashboard-item:hover {
-  transform: scale(1.05);
-   box-shadow:
-    /* 1) Dark inset in bottom‐right */
-    inset 4px 4px 8px rgba(0, 0, 0, 0.7),
-    /* 2) Light inset in top‐left */
-    inset -4px -4px 8px rgba(255, 255, 255, 0.05),
-    /* 3) Outset blue glow */
-    0 8px 30px rgba(0, 150, 255, 0.4);
+  overflow: hidden;
+  z-index: 1;
   
-
 }
 
+.achievement-dark {
+  background: linear-gradient(135deg,  #2222228e, #2a2a3d, #1e1e2f);
+   background-color: #2222228e;
+  color: #e0e0e0;
+}
+
+.achievement-light {
+  background: rgb(230, 230, 230);
+  color: #1e1e2f;
+}
+
+/* Card Patterns */
+.pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.pattern.circuit {
+ background-image: repeating-linear-gradient(
+    45deg,
+    var(--accent-color),
+    var(--accent-color) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+.pattern.binary {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='5' y='10' font-family='monospace' font-size='8' fill='currentColor'%3E1010 0101 1100%3C/text%3E%3Ctext x='5' y='25' font-family='monospace' font-size='8' fill='currentColor'%3E0011 1001 0110%3C/text%3E%3Ctext x='5' y='40' font-family='monospace' font-size='8' fill='currentColor'%3E1101 1010 0011%3C/text%3E%3Ctext x='5' y='55' font-family='monospace' font-size='8' fill='currentColor'%3E0100 1110 1001%3C/text%3E%3Ctext x='5' y='70' font-family='monospace' font-size='8' fill='currentColor'%3E1011 0010 1101%3C/text%3E%3Ctext x='5' y='85' font-family='monospace' font-size='8' fill='currentColor'%3E0110 1011 0100%3C/text%3E%3C/svg%3E");
+  background-size: 100px 100px;
+  color: var(--accent-color);
+  opacity: 0.15;
+}
+.pattern.dots {
+  background-image: radial-gradient(circle at center, var(--accent-color) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.pattern.clouds {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 50Q25 40 35 40Q40 25 50 25Q60 25 65 40Q75 40 80 50Q90 50 90 60Q90 70 80 70H20Q10 70 10 60Q10 50 20 50Z' fill='var(--accent-color)'/%3E%3C/svg%3E");
+  background-size: 30px 30px;
+}
+
+.pattern.lines {
+  background-image: repeating-linear-gradient(
+    145deg,
+    var(--accent-color),
+    var(--accent-color) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+.pattern.waves {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50Q25 60 50 50T100 50V60Q75 70 50 60T0 70V50Z' fill='var(--accent-color)'/%3E%3C/svg%3E");
+  background-size: 20px 20px;
+}
+
+/* Glow Effect */
+.card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, var(--accent-color) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.dashboard-item:hover .card-glow {
+  opacity: 0.1;
+}
+
+/* Corner Accents */
+.corner-accent {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.corner-accent.top-left {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 8px 0 0 0;
+}
+
+.corner-accent.top-right {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 8px 0 0;
+}
+
+.corner-accent.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+  border-radius: 0 0 0 8px;
+  /* opacity: .4; */
+}
+
+.corner-accent.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 8px 0;
+}
+
+.dashboard-item:hover .corner-accent {
+  opacity: 1;
+}
+
+/* Card Content */
 .dashboard-item .icon {
   font-size: 36px;
   margin-bottom: 12px;
-  color: #00aaff;
+  color: var(--accent-color);
   text-shadow: 0 2px 6px rgba(0, 170, 255, 0.5);
 }
-
-.dashboard-item p {
+.title {
+  /* background-color: red; */
+  border-bottom: 2px solid var(--accent-color);
+}
+.dashboard-item .title {
   margin: 0;
   font-weight: 600;
   font-size: .85rem;
   letter-spacing: 0.03em;
-  border-bottom: 2px solid transparent;
+  /* border-bottom: 2px solid var(--accent-color); */
+  /* background-color: red; */
+  text-align: center;
   padding-bottom: 6px;
   transition: border-color 0.3s ease;
   max-width: 90%;
+  z-index: 2;
 }
 
-.dashboard-item:hover p {
-  border-bottom: 2px solid #00aaff;
+.dashboard-item:hover .title {
+  border-bottom: 2px solid var(--accent-color);
 }
 
-.dashboard-item.large p {
-  font-size: 1.3rem;
-  font-weight: 700;
+.dashboard-item .subtitle {
+  font-size: 0.9rem;
+  margin-top: 6px;
+  font-weight: 400;
+  opacity: 0.8;
+  z-index: 2;
 }
 
-.dashboard-item.medium-large p {
-  font-size: 1.15rem;
-  font-weight: 600;
+.achievement-dark-title {
+  color: #e0e0e0;
 }
 
+.achievement-light-title {
+  color: #252525;
+}
+
+.achievement-dark-sub {
+  color: #a0a0b0;
+}
+
+.achievement-light-sub {
+  color: #555;
+}
+
+/* Card Sizes */
 .dashboard-item.large {
   grid-column: span 2;
   grid-row: span 2;
+}
+
+.dashboard-item.large p {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .dashboard-item.medium-large {
@@ -379,8 +259,22 @@
   grid-row: span 1;
 }
 
+.dashboard-item.medium-large p {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
 .dashboard-item.medium {
   grid-column: span 1;
+  grid-row: span 1;
+}
+
+.dashboard-item.tall {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.dashboard-item.tall-wide {
+  grid-column: span 2;
   grid-row: span 1;
 }
 
@@ -390,96 +284,126 @@
   font-size: 0.9em;
 }
 
+.dashboard-item{
+  border-radius: .5rem;
+   box-shadow:
+    /* 1) Dark inset in bottom‐right */
+    inset 4px 4px 8px rgba(0, 0, 0, 0.7),
+    /* 2) Light inset in top‐left */
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05),
+    /* 3) Outset glow using accent color */
+    /* 0 8px 30px color-mix(in srgb, var(--accent-color) 30%, transparent 70%);   */
 
-.dashboard-item .subtitle {
-  /* color: #a0a0b0; */
-  font-size: 0.9rem;
-  margin-top: 6px;
-  font-weight: 400;
-  opacity: 0.8;
+
+}
+/* Hover Effects */
+.dashboard-item:hover {
+  transform: scale(1.05);
+  box-shadow:
+    /* 1) Dark inset in bottom‐right */
+    inset 4px 4px 8px rgba(0, 0, 0, 0.7),
+    /* 2) Light inset in top‐left */
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05),
+    /* 3) Outset glow using accent color */
+    0 8px 30px color-mix(in srgb, var(--accent-color) 20%, transparent 70%);
+    /* background-color: red; */
+    border-radius: .5rem;
 }
 
+/* Responsive Adjustments */
 @media (min-width: 1118px) and (max-width: 1300px) {
-  /* ==== Your CSS rules for screens 1118px–1300px wide ==== */
-
-  /* Example: change the dashboard‐grid to 3 columns in this range */
   .dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
-  /* Example: make “large” items span all 3 columns */
   .dashboard-item.large {
-    grid-column: 1 / -1;   /* covers columns 1–3 */
-    grid-row: span 2;      /* e.g. two row‐heights tall */
+    grid-column: 1 / -1;
+    grid-row: span 2;
   }
 
-  /* Example: adjust font‐size or padding for medium items */
   .dashboard-item.medium {
     font-size: 1rem;
     padding: 1rem;
   }
-
-  /* …any other overrides you need… */
 }
 
-
 @media (max-width: 625px) {
+  .achievement-main-container{
+    margin: 1.5rem;
+  }
+  .dashboard-item .title {
+    font-size: 16px;
+    /* margin-top: -1rem; */
+  }
+   .dashboard-item .subtitle {
+    font-size: 12px;
+    /* color: aquamarine; */
+  overflow: auto;
+   }
+   .dashboard-item.large p{
+    font-size: 16px;
+    /* color: green; */
+   }
+   .dashboard-item.tall-wide .title{
+    font-size: 13px;
+    /* color: orange ;  */
+   }
+   .dashboard-item.medium-large .title{
+    font-size: 13px;
+    /* color: rgb(7, 169, 88) ;  */
+   }
+   .dashboard-item.medium .title{
+    font-size: 14px;
+    padding-bottom: 1rem;
+    /* color: rgb(58, 7, 169) ;  */
+   }
+   .dashboard-item.medium .subtitle{
+    font-size: 10px;
+    padding-bottom: 1rem;
+    /* color: rgb(58, 7, 169) ;  */
+   }
   .dashboard-item p {
-    /* 1) force the element to act like a 2-line vertical box */
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;     /* show at most 2 lines */
-    
-    /* 2) hide any overflow beyond those 2 lines */
+    -webkit-line-clamp: 3;
     overflow: hidden;
-
-    /* 3) ensure long words still break if needed */
     overflow-wrap: break-word;
     word-break: break-word;
-
-    /* (optional) reduce font-size a bit */
-    font-size: 1rem;
+    /* font-size: .5rem; */
     line-height: 1;
   }
 
   .dashboard-grid {
-    display: grid;                                  /* ensure it’s still a grid */
-    grid-template-columns: repeat(2, 1fr);          /* exactly 2 columns of equal width */
-    grid-auto-rows: 150px;                          /* each implicit row = 150px tall */
-    gap: 1rem;                                      /* same gap you had above */
-    width: 100%;                                    /* fill the screen width */
-    padding: 0 1rem;                                /* optional: small side padding */
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 1rem;
   }
 
-  /* 2) Large items → full width (both columns), 2 rows tall (300px) */
   .dashboard-item.large {
-    grid-column: 1 / -1;    /* start at col 1, end at last col (2) ⇒ 100% width */
-    grid-row: span 2;       /* 2 × 150px = 300px tall */
+    grid-column: 1 / -1;
+    grid-row: span 1;
   }
 
-  /* 3) Tall items → full width (both columns), 1 row tall (150px) */
   .dashboard-item.tall {
-    grid-column: 1 / -1;    /* full width */
-    grid-row: span 1;       /* 1 × 150px = 150px tall */
+    grid-column: 1 / -1;
+    grid-row: span 1;
   }
 
-  /* 4) Medium items → half width (1 column), 1 row tall (150px) */
   .dashboard-item.medium {
-    grid-column: span 1;    /* only 1 column out of 2 ⇒ 50% width */
-    grid-row: span 1;       /* 1 × 150px = 150px tall */
+    grid-column: span 1;
+    grid-row: span 1;
   }
 
-  /* 5) (Optional) Small items behave like “medium” on mobile */
   .dashboard-item.small {
     grid-column: span 1;
     grid-row: span 1;
   }
 
-  /* 6) Remove any “outer-div” overrides if they were only for mobile */
   .outer-div {
-    margin: 0;             /* you can keep this if you want zero margin on mobile */ 
-    padding: 0;            /* or remove if you prefer no change */
+    margin: 0;
+    padding: 0;
   }
 }
