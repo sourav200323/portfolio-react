@@ -1,45 +1,45 @@
-import React , {useState} from 'react'
+import React , {useState, useEffect} from 'react'
 import './project.css'
 import Modal from '../SupportingComonent/Modal';
 import ImageSlideShow from '../SupportingComonent/ImageSlideShow' ; 
 
 const project = [{
   name: "Domestic Water wastage Preventio System ",
-  logo: "./public/project-img/dwp-black-log.png",
-  githubLink: "https://github.com/yourname/portfolio",
-  linkedinLink: "https://linkedin.com/in/yourname",
-  liveDemo: "https://yourportfolio.com",
+  logo: "https://i.ibb.co/cKZv9Xh1/DWWP-LOGO.png",
+  githubLink: "https://github.com/akashbera009/DWWP_2.0",
+  linkedinLink: "https://www.linkedin.com/posts/akash-bera-5a3009250_sustainableliving-iotinnovation-waterconservation-activity-7282042471600082944-EBU9?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD3wAAsB977LsEl8sRR8MeVQFjq4hLqdFl4",
+  liveDemo: "https://dwwp-20-git-main-akash-beras-projects-53418e47.vercel.app/",
   images: [
-  './public/project-img/dwp-black-log.png',
-  './public/project-img/Screenshot 2024-07-31 182100.png',
-  './public/project-img/Screenshot 2025-03-28 100546.png',
+  'https://i.ibb.co/1GPKv96v/Screenshot-2025-03-28-100546.png',
+  'https://i.ibb.co/V1mHp5d/Screenshot-2025-06-13-173948.png',
+  'https://i.ibb.co/BHtW46Qz/Screenshot-2025-06-13-174003.png',
   ],
-  description: "A personal portfolio website to showcase my projects and skills.",
-  techStack: ["React", "CSS", "Framer Motion", "EmailJS"],
-  features: ["Responsive layout", "Dark mode toggle"],
+  description: "Domestic Water Wastage Prevention System is an IoT-enabled smart water management solution that combines real-time monitoring, automated control, and cloud integration. It supports hybrid online-offline operation, provides role-based access, and ensures efficient water usage through intelligent decision-making and secure payment integration.",
+  techStack: ["React", "Arduino", "Firebase", "RazorPay" , "CSS"],
+  features: ["Responsive layout", "Dark mode toggle", "Real-time data Sync"],
   role: "Full-stack Developer",
-  challenges: "Creating smooth animations and responsive design for all screen sizes.",
+  challenges: "Connecting IoT device with database and eventully with Frontened . A big challenge was to maintain real time data synchronization with databse and IoT device  ",
   isResponsive: true,
   performanceBadge: "Lighthouse Score: 95+"
 },
 {
   name: "Clode Media",
-  logo: "./public/project-img/cloud-media.png",
-  githubLink: "https://github.com/yourname/portfolio",
-  linkedinLink: "https://linkedin.com/in/yourname",
-  liveDemo: "https://yourportfolio.com",
+  logo: "https://i.ibb.co/m5TfNXWC/Screenshot-2025-04-04-170142.png",
+  githubLink: "https://github.com/akashbera009/cloud-media",
+  linkedinLink: "https://www.linkedin.com/posts/akash-bera-5a3009250_mern-react-nodejs-activity-7299369931836403712-WyQn?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD3wAAsB977LsEl8sRR8MeVQFjq4hLqdFl4",
+  liveDemo: "",
   images: [
-    "/images/screen1.png",
-    "/images/screen2.png",
-    "/images/screen3.png"
+    "https://i.ibb.co/hxRDX0YZ/Screenshot-2025-06-13-180223.png",
+    "https://i.ibb.co/RpygqXt1/Screenshot-2025-06-13-181001.png",
+    "https://i.ibb.co/4Z8H8LDs/Screenshot-2025-06-13-181013.png"
   ],
-  description: "A personal portfolio website to showcase my projects and skills.",
-  techStack: ["React", "CSS", "Framer Motion", "EmailJS"],
-  features: ["Responsive layout", "Animated "],
-  role: "Full-stack Developer",
-  challenges: "Creating smooth animations and responsive design for all screen sizes.",
+  description: "Cloud-Media is a secure and scalable MERN stack application designed for personalized file management. It features user authentication with JWT and bcrypt, image uploads with multer, and individual file galleries for each user—all powered by MongoDB and Express APIs.",
+  techStack: [ "MERN", "CSS", "JWT" ,"bcrypt",  "AXIOS" , "Multer"],
+  features: ["Role based Authentication", "Secure Storage"],
+  role: "MERN-stack Developer",
+  challenges: "Faced challenges in implementing secure authentication, handling file uploads, enforcing user-specific access, managing consistent error handling, and configuring environment variables for deployment.",
   isResponsive: true,
-  performanceBadge: "Lighthouse Score: 95+"
+  performanceBadge: "Lighthouse Score: 85+"
 },
 
 {
@@ -107,7 +107,23 @@ function Projects() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
-  const visibleProjects = isExpanded ? project : project.slice(0, 3);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      // Clean up the event listener
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  const visibleProjects = isExpanded
+  ? project
+  : isMobile
+    ? project.slice(0, 2)  // Show only 2 on mobile
+    : project.slice(0, 3); // Show 3 on desktop
+
 
     const handleOpenModal = (proj) => {
     setSelectedProject(proj);
@@ -115,7 +131,7 @@ function Projects() {
   };
   return (
     <>
-    <h2>Projects</h2>
+    <h2>Selected Works</h2>
 <div className="projects-section">
  <div className={`alter-prjct-container ${isExpanded ? 'expanded' : ''}`}>
  {visibleProjects.map((proj, index) => (
@@ -134,7 +150,7 @@ function Projects() {
             <path fill="currentColor" d="M128.001 30C72.779 30 28 74.77 28 130.001c0 44.183 28.653 81.667 68.387 94.89c4.997.926 6.832-2.169 6.832-4.81c0-2.385-.093-10.262-.136-18.618c-27.82 6.049-33.69-11.799-33.69-11.799c-4.55-11.559-11.104-14.632-11.104-14.632c-9.073-6.207.684-6.079.684-6.079c10.042.705 15.33 10.305 15.33 10.305c8.919 15.288 23.394 10.868 29.1 8.313c.898-6.464 3.489-10.875 6.349-13.372c-22.211-2.529-45.56-11.104-45.56-49.421c0-10.918 3.906-19.839 10.303-26.842c-1.039-2.519-4.462-12.69.968-26.464c0 0 8.398-2.687 27.508 10.25c7.977-2.215 16.531-3.326 25.03-3.364c8.498.038 17.06 1.149 25.051 3.365c19.087-12.939 27.473-10.25 27.473-10.25c5.443 13.773 2.019 23.945.98 26.463c6.412 7.003 10.292 15.924 10.292 26.842c0 38.409-23.394 46.866-45.662 49.341c3.587 3.104 6.783 9.189 6.783 18.519c0 13.38-.116 24.149-.116 27.443c0 2.661 1.8 5.779 6.869 4.797C199.383 211.64 228 174.169 228 130.001C228 74.771 183.227 30 128.001 30"/>
           </svg>
         </a>
-        <a href={proj.linkedinLink} target="_blank" rel="noopener noreferrer">
+        {/* <a href={proj.linkedinLink} target="_blank" rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256">
             <rect width="256" height="256" fill="none"/>
             <rect width="215" height="184" x="20" y="36" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" rx="8"/>
@@ -143,7 +159,7 @@ function Projects() {
             <line x1="92" x2="164" y1="144" y2="144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
             <circle cx="92" cy="80" r="12"/>
           </svg>
-        </a>
+        </a> */}
       </div>
     </div>
   </div>

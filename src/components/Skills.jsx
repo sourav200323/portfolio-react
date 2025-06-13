@@ -126,7 +126,7 @@ function Skills() {
 <div className="skills-bg-grid"></div> 
     <div className="skills-container">
       
-        <h2>Skills </h2>
+        <h2>Technical Proficiency </h2>
         
   <div className="header-badge"><p className='animated-gradient-text'>Primary Technical Domains</p></div>
 

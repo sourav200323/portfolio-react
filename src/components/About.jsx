@@ -18,6 +18,7 @@ function About() {
 
 
 
+
   const DesktopVersion = ({ isDarkMode })  => (
     <div className='about-main' >
       <div className="grid"></div>
@@ -102,13 +103,17 @@ function About() {
               </div>
               <div class="right-side">
                 <img src="https://i.ibb.co/9YQFc2M/Picsart-24-12-28-14-15-11-867.png" alt="Akash Bera" className="profile-image" loading='eager' />
+                {/* <img src="https://i.ibb.co/HfvmYrk4/profile-pic-removebg-preview.png" alt="Akash Bera" className="profile-image" loading='eager' /> */}
               </div>
             </div>
           {/* </section> */}
+
+
     </div>
   )
 
 const MobileVersion = ({ isDarkMode }) => {
+
   const [animateGreeting, setAnimateGreeting] = useState(false);
    const [showIntroName, setShowIntroName] = useState(false);
 
@@ -221,7 +226,6 @@ const MobileVersion = ({ isDarkMode }) => {
     </button>
   </a>
 </div>
-
 </div>
   );
 };

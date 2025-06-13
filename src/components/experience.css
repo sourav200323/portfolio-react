@@ -62,11 +62,12 @@
   font-size: .875rem;
   color: #777;
   margin-bottom: 15px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .description {
   /* font-size: 1.1rem; */
-  font-size: 16px;
+  font-size: 14px;
   color: #444;
   line-height: 1.6;
   letter-spacing: 0.5px;
@@ -86,17 +87,6 @@
 .experience-card:nth-child(3){
    border-left: 8px solid #238636; 
 }
-/* .experience-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 97%;
-  background: linear-gradient(to bottom, #4493f8, #665af0);
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-} */
 .navbar-dark h3 {
   color: #fff;
 }
@@ -104,9 +94,11 @@
 .navbar-dark .company-name {
 }
 
-.navbar-dark .duration,
+.navbar-dark .duration{
+   color: #e0e0e0;
+}
 .navbar-dark .description {
-  color: #e0e0e0;
+  color: #d2d2d2;
 }
 
 /* Light mode adjustments */
@@ -278,7 +270,7 @@
 }
 
 .dark .tech-tag {
-  background: #665af0;;
+  background: #665af0c1;;
   color: #f0f6fc;
   padding: 6px 12px;
   border-radius: 12px;
@@ -346,7 +338,9 @@
   .hackathon-grid {
     grid-template-columns: 1fr;
   }
-
+  .dark .tech-tag{
+    font-size:12px;
+  }
   .hackathon-card {
     padding: 18px;
   }

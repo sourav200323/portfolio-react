@@ -55,7 +55,7 @@ function Achievements() {
   return (
     <div className={`achievement-main-container ${isDarkMode ? 'dark' : 'light'}`}>
       <div className="skills-bg-grid"></div>
-      <h2 >Achievements</h2>
+      <h2 >Milestones</h2>
 
       <div className="outer-div">
         <div className="dashboard-grid">

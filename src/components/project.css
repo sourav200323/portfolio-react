@@ -1,3 +1,4 @@
+
 h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -5,11 +6,13 @@ h2 {
     color: #333;
     margin-bottom: 30px;
     font-family: 'Lexend Giga', sans-serif;
+     font-family: 'Edu NSW ACT Hand Pre', cursive;
   }
 
 @media (max-width: 768px) {
   h2{
     font-size: 1.6rem;
+   color: #565656;
   }
 }
 

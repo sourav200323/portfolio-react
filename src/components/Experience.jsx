@@ -27,7 +27,7 @@ function Experience  () {
   ];
   return (
     <div className="experience-container">
-      <h2>Work Experience</h2>
+      <h2>Professional Journey</h2>
       <div className={`experience-list ${isDarkMode ? 'navbar-dark' : 'navbar-light'}`}>
         {experiences.map((exp, index) => (
           <motion.div
@@ -50,34 +50,38 @@ function Experience  () {
     <h3 className={`hackathons-subsection   ${isDarkMode ? 'dark' : 'light'}`}>Hackathons</h3>
     <div class="hackathon-grid">
       <div class={`hackathon-card  ${isDarkMode ? 'dark' : 'light'}`}>
-        <h4>CodeStorm Hackathon 2024</h4>
+        <h4>AceHack 4.0</h4>
         <p class={`hackathon-date  ${isDarkMode ? 'dark' : 'light'}`}>June 2024</p>
-        <p class="hackathon-role">Team Lead & Frontend Developer</p>
+        <p class="hackathon-role">Team Lead & Backend Developer</p>
         <p class="hackathon-achievements">
-          Developed a real-time collaborative task management app. Won <strong>1st Place</strong> for innovative use of WebSocket technology.
+          An IoT-based <strong>smart water management</strong> system enabling <strong>real-time monitoring</strong> , <strong>automated control</strong> , and cloud/offline synchronization, with role-based access and integrated <strong>payment</strong> handling.
         </p>
         <div class={`hackathon-tech ${isDarkMode ? 'dark' : 'light'}`}>
           <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>React</span>
-          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>Node.js</span>
-          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>WebSocket</span>
+          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>Fierbase</span>
+          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>IoT</span>
+          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>Arduino</span>
+        </div>
+        <a href="https://github.com/akashbera009/DWWP_2.0" class={`hackathon-link1  ${isDarkMode ? 'dark' : 'light'}`} target="_blank">View Project</a>
+      </div>
+      <div class={`hackathon-card  ${isDarkMode ? 'dark' : 'light'}`}>
+        <h4>Duhacks 2.0</h4>
+        <p class={`hackathon-date  ${isDarkMode ? 'dark' : 'light'}`}>March 2025</p>
+        <p class="hackathon-role">Frontend Developer</p>
+        <p class="hackathon-achievements">
+          Built a <strong>Medicare</strong> web app for booking doctor appointments with planned features for locating nearby clinics and <strong>viewing</strong> doctor details.
+  
+        </p>
+        <div class={`hackathon-tech ${isDarkMode ? 'dark' : 'light'}`}>
+          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>HTML</span>
+          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>CSS</span>
+          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>JS</span>
+          <span class={`tech-tag  ${isDarkMode ? 'dark' : 'light'}`}>GSheet</span>
         </div>
         <a href="https://github.com/your-repo/codestorm" class={`hackathon-link1  ${isDarkMode ? 'dark' : 'light'}`} target="_blank">View Project</a>
       </div>
       
-      <div class="hackathon-card">
-        <h4>AI Innovate Hackathon 2023</h4>
-        <p class="hackathon-date">November 2023</p>
-        <p class="hackathon-role">Backend Developer</p>
-        <p class="hackathon-achievements">
-          Built an AI-powered chatbot for mental health support. Awarded <strong>Best Use of AI</strong>.
-        </p>
-        <div class="hackathon-tech">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Flask</span>
-          <span class="tech-tag">TensorFlow</span>
-        </div>
-        <a href="https://github.com/your-repo/ai-innovate" class="hackathon-link" target="_blank">View Project</a>
-      </div>
+
     </div>
 
     </div>

@@ -47,7 +47,7 @@ const Contact = () => {
     }
   };
   return (<>
-    <h2>Contact</h2>  
+    <h2>Get in Touch</h2>  
     <div className='contact-container'>
       <div className='social-contact'>
         <Soclail_Contact_Card/>

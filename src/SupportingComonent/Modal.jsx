@@ -83,7 +83,7 @@ const Modal = ({ isOpen, onClose, project }) => {
         <div className="modal-content">
           <div className="description-section">
             <h3 className="section-title1">Project Overview</h3>
-            <p className="description">{description}</p>
+            <p className="description1">{description}</p>
           </div>
 
           <div className="modal-info-row">

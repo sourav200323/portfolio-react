@@ -88,7 +88,7 @@
   z-index: 1;
   top: -.3rem;
   border-radius: 40px;
-  padding: 2px; /* ⬅️ Increased from 30px to make border thicker */
+  padding: 6px; /* ⬅️ Increased from 30px to make border thicker */
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -102,10 +102,23 @@
   bottom: 0;
   border-radius: 40px;
   background: linear-gradient(45deg, #149CEA, #665af0);
+    background: linear-gradient(45deg, #149CEA, #665af0, #149CEA);
+      background-size: 300% 300%;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   z-index: -1; /* Put behind content */
+   animation: borderMove 4s ease infinite;
 }
-
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .navbar-dark {
     background-color: black;
     color: white;
@@ -210,6 +223,7 @@
     }
 }
 
+
 .linkedin-and-theme-button{
     max-width: 10%;
     display: flex;
@@ -222,7 +236,10 @@
 .download-resume{
     margin-right: 15%;
 }
-
+.text-download{
+    /* background-color: red; */
+    margin-left: 2rem;
+}
 
 abbr {
     text-decoration: dotted underline; /* Underline to indicate abbreviation */
