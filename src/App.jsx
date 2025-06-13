@@ -168,8 +168,8 @@ const MainContent = () => {
   return (<>
     <ThemeProvider>
       {loading ? (
-         <MainContent />
-        // <LoadingScreen onComplete={handleLoadingComplete} />
+        //  <MainContent />
+        <LoadingScreen onComplete={handleLoadingComplete} />
 
       ) : (
         <MainContent />
