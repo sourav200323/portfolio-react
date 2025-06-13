@@ -61,7 +61,7 @@ const LoadingScreen = ({ onComplete }) => {
   useEffect(() => {
     // Simulate typing effect with a delay
     if (currentLine < loadingLines.length) {
-      const typingSpeeds = [50, 100, 150]; // Different speeds in ms
+      const typingSpeeds = [0, 150, 50]; // Different speeds in ms
 
       const timeoutId = setTimeout(() => {
         setLines((prevLines) => [...prevLines, loadingLines[currentLine]]);
@@ -73,7 +73,7 @@ const LoadingScreen = ({ onComplete }) => {
       // When loading is complete, trigger the parent function
       const completeTimeout = setTimeout(() => {
         onComplete();
-      }, 500); // Delay before calling onComplete (which hides the loading screen)
+      }, 200); // Delay before calling onComplete (which hides the loading screen)
 
       return () => clearTimeout(completeTimeout);
     }
