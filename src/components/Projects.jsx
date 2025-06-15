@@ -43,23 +43,23 @@ const project = [{
 },
 
 {
-  name: "Score-Vault",
-  logo: "./public/",
-  githubLink: "https://github.com/yourname/portfolio",
-  linkedinLink: "https://linkedin.com/in/yourname",
-  liveDemo: "https://yourportfolio.com",
+  name: "FoodieRoute.com",
+  logo: "https://i.ibb.co/vVvwwNp/Picsart-23-11-19-00-47-40-912.png",
+  githubLink: "https://github.com/akashbera009/FoodieRoute.com",
+  linkedinLink: "",
+  liveDemo: "",
   images: [
-    "/images/screen1.png",
-    "/images/screen2.png",
-    "/images/screen3.png"
+    "https://i.ibb.co/QFqMS3pT/Screenshot-2025-06-15-131048.png",
+    "https://i.ibb.co/LXGnp0xK/Screenshot-2025-06-15-131646.png",
+    "https://i.ibb.co/svG0MC5g/Screenshot-2025-06-15-130658.png"
   ],
-  description: "A personal portfolio website to showcase my projects and skills.",
-  techStack: ["React", "CSS", "Framer Motion", "EmailJS"],
-  features: ["Responsive layout", "Animated "],
-  role: "Full-stack Developer",
-  challenges: "Creating smooth animations and responsive design for all screen sizes.",
-  isResponsive: true,
-  performanceBadge: "Lighthouse Score: 95+"
+  description: "FoodieRoute.com is a web-based food ordering platform that connects users with the nearest available restaurants using a clean, responsive interface.",
+  techStack: ["HTML", "CSS", "JS", "PHP", "SQL"],
+  features: ["Simple UI", "User Interactive"],
+  role: "PHP Developer",
+  challenges: "Connecting PHP with database while maintaining secure connection with Frontend",
+  isResponsive: false,
+  performanceBadge: "Lighthouse Score: 70+"
 },
 
 {
@@ -82,25 +82,7 @@ const project = [{
   performanceBadge: "Lighthouse Score: 95+"
 },
 
-{
-  name: "Score-Vault",
-  logo: "./public/",
-  githubLink: "https://github.com/yourname/portfolio",
-  linkedinLink: "https://linkedin.com/in/yourname",
-  liveDemo: "https://yourportfolio.com",
-  images: [
-    "/images/screen1.png",
-    "/images/screen2.png",
-    "/images/screen3.png"
-  ],
-  description: "A personal portfolio website to showcase my projects and skills.",
-  techStack: ["React", "CSS", "Framer Motion", "EmailJS"],
-  features: ["Responsive layout", "Animated "],
-  role: "Full-stack Developer",
-  challenges: "Creating smooth animations and responsive design for all screen sizes.",
-  isResponsive: true,
-  performanceBadge: "Lighthouse Score: 95+"
-}
+
 ];
 
 function Projects() {
