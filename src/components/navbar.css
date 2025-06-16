@@ -238,7 +238,7 @@
 }
 .text-download{
     /* background-color: red; */
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
 }
 
 abbr {
@@ -457,7 +457,7 @@ abbr {
   position: absolute;
   left: -10rem; /* aligns it directly with the button's left edge */
   transform: translateX(-8px); /* shift it slightly to the left */
-  min-width: 200px;
+  min-width: 180px;
   border-radius: 8px;
   z-index: 1000;
   overflow: hidden;
@@ -469,6 +469,8 @@ abbr {
 
 .dropdown-content.link-dark{
     background:linear-gradient(to bottom, rgb(31, 41, 55), rgb(17, 24, 39));
+    
+  /* background-color: red; */
 } 
 .dropdown-content.link-light{
     background:linear-gradient(to bottom, rgb(220, 220, 220), rgb(183, 196, 222));
