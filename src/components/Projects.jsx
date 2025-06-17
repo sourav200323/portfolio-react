@@ -62,25 +62,25 @@ const project = [{
   performanceBadge: "Lighthouse Score: 70+"
 },
 
-{
-  name: "Score-Vault",
-  logo: "./public/",
-  githubLink: "https://github.com/yourname/portfolio",
-  linkedinLink: "https://linkedin.com/in/yourname",
-  liveDemo: "https://yourportfolio.com",
-  images: [
-    "/images/screen1.png",
-    "/images/screen2.png",
-    "/images/screen3.png"
-  ],
-  description: "A personal portfolio website to showcase my projects and skills.",
-  techStack: ["React", "CSS", "Framer Motion", "EmailJS"],
-  features: ["Responsive layout", "Animated "],
-  role: "Full-stack Developer",
-  challenges: "Creating smooth animations and responsive design for all screen sizes.",
-  isResponsive: true,
-  performanceBadge: "Lighthouse Score: 95+"
-},
+// {
+//   name: "Score-Vault",
+//   logo: "./public/",
+//   githubLink: "https://github.com/yourname/portfolio",
+//   linkedinLink: "https://linkedin.com/in/yourname",
+//   liveDemo: "https://yourportfolio.com",
+//   images: [
+//     "/images/screen1.png",
+//     "/images/screen2.png",
+//     "/images/screen3.png"
+//   ],
+//   description: "A personal portfolio website to showcase my projects and skills.",
+//   techStack: ["React", "CSS", "Framer Motion", "EmailJS"],
+//   features: ["Responsive layout", "Animated "],
+//   role: "Full-stack Developer",
+//   challenges: "Creating smooth animations and responsive design for all screen sizes.",
+//   isResponsive: true,
+//   performanceBadge: "Lighthouse Score: 95+"
+// },
 
 
 ];

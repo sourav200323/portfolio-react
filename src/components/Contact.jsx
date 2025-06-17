@@ -35,12 +35,16 @@ const Contact = () => {
   };
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      if (step === 1 && email !== '') {
-        setStep(2);
+      if (step === 1) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailRegex.test(email)) {
+          setStep(2); // Only go to next step if email is valid
+        } else {
+          alert('Please enter a valid email address.');
+       }
       } else if (step === 2 && name !== '') {
         setStep(3);
       } else if (step === 3 && description !== '') {
-        // Save the description input and mark completion
         setCompleted(true);
         setStep(4); // Move to a new step to indicate completion
       }
