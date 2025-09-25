@@ -7,23 +7,29 @@ function Experience  () {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const experiences = [
     {
+      title: 'Software Engoneer Trainee',
+      company: 'DianApps Technologies',
+      duration: 'Sep 2025 - Present',
+      description: 'Currently working as Software Engineer Trainee, learning and implementing React Native'
+    },
+    {
       title: 'AICTE Eduskill Virtual Internship',
       company: 'Google Android Development',
       duration: 'Aug 2024 - Oct 2024',
       description: 'Gained practical experience in Android development and contributed to project implementation.'
     },
-    {
-      title: 'Frontend Developer',
-      company: 'Codesoft',
-      duration: 'June 2024 - Aug 2024',
-      description: 'Developed user interfaces and improved website functionality, enhancing user experience'
-    },
     // {
-    //   title: 'Acehack 3.0',
-    //   company: '36-hour Inter-College Hackathon',
-    //   duration: 'Feb 2024 - April 2024',
-    //   description: ' Participated with team, demonstrating problem-solving skills under tight deadlines.'
+    //   title: 'Frontend Developer',
+    //   company: 'Codesoft',
+    //   duration: 'June 2024 - Aug 2024',
+    //   description: 'Developed user interfaces and improved website functionality, enhancing user experience'
     // },
+    {
+      title: 'Acehack 3.0',
+      company: '36-hour Inter-College Hackathon',
+      duration: 'Feb 2024 - April 2024',
+      description: ' Participated with team, demonstrating problem-solving skills under tight deadlines.'
+    },
   ];
   return (
     <div className="experience-container">

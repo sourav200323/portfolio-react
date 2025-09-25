@@ -73,7 +73,7 @@ const LoadingScreen = ({ onComplete }) => {
       // When loading is complete, trigger the parent function
       const completeTimeout = setTimeout(() => {
         onComplete();
-      }, 200); // Delay before calling onComplete (which hides the loading screen)
+      }, 100); // Delay before calling onComplete (which hides the loading screen)
 
       return () => clearTimeout(completeTimeout);
     }

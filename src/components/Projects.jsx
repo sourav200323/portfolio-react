@@ -4,6 +4,27 @@ import Modal from '../SupportingComonent/Modal';
 import ImageSlideShow from '../SupportingComonent/ImageSlideShow' ; 
 
 const project = [{
+  
+  name: "YuktiVerse - AI powred learning platform",
+  logo: "https://i.ibb.co/PzPzQ98D/Chat-GPT-Image-Aug-13-2025-12-36-53-AM.png",
+  githubLink: 'https://github.com/akashbera009/YuktiVerse',
+  linkedinLink: "https://www.linkedin.com/posts/akash-bera-5a3009250_yuktiverse-mern-ai-activity-7363206509670903809-ExLH?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD3wAAsB977LsEl8sRR8MeVQFjq4hLqdFl4",
+  liveDemo: "https://yukti-verse.vercel.app/",
+  images: [
+  'https://i.ibb.co/tw1xHxgn/Screenshot-2025-08-23-202745.png',
+  'https://i.ibb.co/JWbjzvn8/Screenshot-2025-08-23-203117.png',
+  'https://i.ibb.co/Zp95gfFq/Screenshot-2025-08-23-202943.png',
+  'https://i.ibb.co/Gv3X34nL/Screenshot-2025-08-23-203232.png '
+  ],
+  description: "AI-Powered Academic Support Platform — a MERN-stack web app to organize study materials , create AI-augmented notebooks with chatbot help, summarize PDFs and generate MCQs/quizzes, analyze resumes with guided feedback, and practice coding with an AI-assisted editor and contest generator.",
+  techStack: ["MERN", "Gemini Client", "Chat-Bot", "Backend Dev" , "smart notebook"],
+  features: ["Note Verse", "Resume Verse", "PDF Verse", "Code Verse"],
+  role: "Collaborative Development Both in frontened & backend",
+  challenges: "Balancing multi-verse modularity (Notebook, Resume, PDF, Code) while keeping the MERN stack clean, secure, and performant. Learnings include Deepened expertise in AI integration, scalable data modeling, and building user-centric productivity tools. ",
+  isResponsive: true,
+  performanceBadge: "Lighthouse Score: 95+"
+},
+{
   name: "Domestic Water wastage Preventio System ",
   logo: "https://i.ibb.co/cKZv9Xh1/DWWP-LOGO.png",
   githubLink: "https://github.com/akashbera009/DWWP_2.0",
@@ -23,7 +44,7 @@ const project = [{
   performanceBadge: "Lighthouse Score: 95+"
 },
 {
-  name: "Clode Media",
+  name: "Clode Media - Secure cloud storgae solution ",
   logo: "https://i.ibb.co/m5TfNXWC/Screenshot-2025-04-04-170142.png",
   githubLink: "https://github.com/akashbera009/cloud-media",
   linkedinLink: "https://www.linkedin.com/posts/akash-bera-5a3009250_mern-react-nodejs-activity-7299369931836403712-WyQn?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD3wAAsB977LsEl8sRR8MeVQFjq4hLqdFl4",
@@ -43,7 +64,7 @@ const project = [{
 },
 
 {
-  name: "FoodieRoute.com",
+  name: "FoodieRoute.com ",
   logo: "https://i.ibb.co/vVvwwNp/Picsart-23-11-19-00-47-40-912.png",
   githubLink: "https://github.com/akashbera009/FoodieRoute.com",
   linkedinLink: "",

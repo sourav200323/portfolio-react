@@ -163,6 +163,7 @@
 }
 
 .navbar-logo h1 {
+   font-size: 1.4em;
     color: #665af0  ;
     margin-right: 2.5rem;
     text-shadow: 2px 2px 0 #0f1111;
