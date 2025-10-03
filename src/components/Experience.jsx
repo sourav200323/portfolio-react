@@ -7,7 +7,7 @@ function Experience  () {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const experiences = [
     {
-      title: 'Software Engoneer Trainee',
+      title: 'Software Engineer Trainee',
       company: 'DianApps Technologies',
       duration: 'Sep 2025 - Present',
       description: 'Currently working as Software Engineer Trainee, learning and implementing React Native'
