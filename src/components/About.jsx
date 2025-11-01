@@ -34,7 +34,8 @@ function About() {
                 </div>
 
                  <div className="intro-desk">
-                  Full Stack Developer & Problem Solver
+                  {/* Full Stack Developer & Problem Solver */}
+                  tekla master
                   </div>
                   <div className="descrip-desk">
                     Specializing in building responsive web applications with modern technologies
@@ -242,7 +243,7 @@ const MobileVersion = ({ isDarkMode }) => {
     
 
   <div className="intro-name">
-    <h1 className="name">I'm </h1>
+    {/* <h1 className="name">I'm </h1> */}
     <img
       className="intro-img"
       height="40px"
@@ -254,7 +255,7 @@ const MobileVersion = ({ isDarkMode }) => {
 
     
     <p className="intro">
-     Full Stack Developer & Problem Solver
+      tekla
     </p>
     <p className="desc">
      Specializing in building responsive web applications with modern technologies
