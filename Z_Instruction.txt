@@ -1,0 +1,12 @@
+npm run dev
+
+src-> components-> (.jsx )
+
+
+
+// for uploading in github 
+
+git add .
+git commit -m "wokirng change korechi"
+git push -u origin main
+
